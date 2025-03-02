@@ -1,0 +1,24 @@
+salesforce.Account "001d200000BMWbYAAX" {
+  AccountNumber = "CD355120-B"
+  Active__c = "Yes"
+  CleanStatus = "Pending"
+  CustomerPriority__c = "High"
+  Fax = "(650) 450-8820"
+  Industry = "Energy"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "United Oil & Gas, Singapore"
+  NumberOfEmployees = 3000
+  NumberofLocations__c = 6
+  Ownership = "Public"
+  Phone = "(650) 450-8810"
+  SLAExpirationDate__c = "2025-06-08"
+  SLASerialNumber__c = "2457"
+  SLA__c = "Platinum"
+  Sic = "4437"
+  TickerSymbol = "UOS"
+  Type = "Customer - Direct"
+  UpsellOpportunity__c = "Maybe"
+  Website = "http://www.uos.com"
+  _alias = "United Oil & Gas, Singapore"
+}

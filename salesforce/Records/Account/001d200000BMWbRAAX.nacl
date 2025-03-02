@@ -1,0 +1,24 @@
+salesforce.Account "001d200000BMWbRAAX" {
+  AccountNumber = "CC213425"
+  Active__c = "No"
+  AnnualRevenue = 950000000
+  CleanStatus = "Pending"
+  Fax = "(014) 427-4428"
+  Industry = "Construction"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "Pyramid Construction Inc."
+  NumberOfEmployees = 2680
+  NumberofLocations__c = 17
+  Ownership = "Public"
+  Phone = "(014) 427-4427"
+  SLAExpirationDate__c = "2025-06-08"
+  SLASerialNumber__c = "9840"
+  SLA__c = "Silver"
+  Sic = "4253"
+  TickerSymbol = "PYR"
+  Type = "Customer - Channel"
+  UpsellOpportunity__c = "Maybe"
+  Website = "www.pyramid.com"
+  _alias = "Pyramid Construction Inc."
+}

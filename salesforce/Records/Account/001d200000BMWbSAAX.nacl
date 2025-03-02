@@ -1,0 +1,24 @@
+salesforce.Account "001d200000BMWbSAAX" {
+  AccountNumber = "CC634267"
+  Active__c = "Yes"
+  AnnualRevenue = 50000000
+  CleanStatus = "Pending"
+  CustomerPriority__c = "Low"
+  Fax = "(785) 241-6201"
+  Industry = "Consulting"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "Dickenson plc"
+  NumberOfEmployees = 120
+  NumberofLocations__c = 2
+  Ownership = "Private"
+  Phone = "(785) 241-6200"
+  SLAExpirationDate__c = "2025-06-08"
+  SLASerialNumber__c = "7425"
+  SLA__c = "Bronze"
+  Sic = "6752"
+  Type = "Customer - Channel"
+  UpsellOpportunity__c = "No"
+  Website = "dickenson-consulting.com"
+  _alias = "Dickenson plc"
+}

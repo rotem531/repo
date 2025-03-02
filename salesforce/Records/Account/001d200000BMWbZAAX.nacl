@@ -1,0 +1,26 @@
+salesforce.Account "001d200000BMWbZAAX" {
+  AccountNumber = "CC978213"
+  Active__c = "Yes"
+  AnnualRevenue = 30000000
+  CleanStatus = "Pending"
+  CustomerPriority__c = "Low"
+  Description = "Genomics company engaged in mapping and sequencing of the human genome and developing gene-based drugs"
+  Fax = "(650) 867-9895"
+  Industry = "Biotechnology"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "GenePoint"
+  NumberOfEmployees = 265
+  NumberofLocations__c = 1
+  Ownership = "Private"
+  Phone = "(650) 867-3450"
+  Rating = "Cold"
+  SLAExpirationDate__c = "2025-06-08"
+  SLASerialNumber__c = "7324"
+  SLA__c = "Bronze"
+  Sic = "3712"
+  Type = "Customer - Channel"
+  UpsellOpportunity__c = "Yes"
+  Website = "www.genepoint.com"
+  _alias = "GenePoint"
+}

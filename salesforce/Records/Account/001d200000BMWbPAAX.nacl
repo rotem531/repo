@@ -1,0 +1,27 @@
+salesforce.Account "001d200000BMWbPAAX" {
+  AccountNumber = "CD451796"
+  Active__c = "Yes"
+  AnnualRevenue = 139000000
+  CleanStatus = "Pending"
+  CustomerPriority__c = "Medium"
+  Description = "Edge, founded in 1998, is a start-up based in Austin, TX. The company designs and manufactures a device to convert music from one digital format to another. Edge sells its product through retailers and its own website."
+  Fax = "(512) 757-9000"
+  Industry = "Electronics"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "Edge Communications"
+  NumberOfEmployees = 1000
+  NumberofLocations__c = 2
+  Ownership = "Public"
+  Phone = "(512) 757-6000"
+  Rating = "Hot"
+  SLAExpirationDate__c = "2024-12-06"
+  SLASerialNumber__c = "2657"
+  SLA__c = "Silver"
+  Sic = "6576"
+  TickerSymbol = "EDGE"
+  Type = "Customer - Direct"
+  UpsellOpportunity__c = "Maybe"
+  Website = "http://edgecomm.com"
+  _alias = "Edge Communications"
+}

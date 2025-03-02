@@ -1,0 +1,25 @@
+salesforce.Account "001d200000BMWbWAAX" {
+  AccountNumber = "CD736025"
+  Active__c = "Yes"
+  CleanStatus = "Pending"
+  CustomerPriority__c = "Medium"
+  Description = "Leading university in AZ offering undergraduate and graduate programs in arts and humanities, pure sciences, engineering, business, and medicine."
+  Fax = "(520) 773-9060"
+  Industry = "Education"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "University of Arizona"
+  NumberOfEmployees = 39000
+  NumberofLocations__c = 3
+  Ownership = "Other"
+  Phone = "(520) 773-9050"
+  Rating = "Warm"
+  SLAExpirationDate__c = "2024-12-06"
+  SLASerialNumber__c = "8350"
+  SLA__c = "Gold"
+  Sic = "7321"
+  Type = "Customer - Direct"
+  UpsellOpportunity__c = "Yes"
+  Website = "www.universityofarizona.com"
+  _alias = "University of Arizona"
+}

@@ -1,0 +1,7 @@
+salesforce.Account "001d200000BMWbbAAH" {
+  CleanStatus = "Pending"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "Sample Account for Entitlements"
+  _alias = "Sample Account for Entitlements"
+}

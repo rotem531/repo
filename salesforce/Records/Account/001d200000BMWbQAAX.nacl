@@ -1,0 +1,24 @@
+salesforce.Account "001d200000BMWbQAAX" {
+  AccountNumber = "CD656092"
+  AnnualRevenue = 350000000
+  CleanStatus = "Pending"
+  Fax = "(336) 222-8000"
+  Industry = "Apparel"
+  IsCustomerPortal = false
+  IsPartner = false
+  Name = "Burlington Textiles Corp of Americana"
+  NumberOfEmployees = 9000
+  NumberofLocations__c = 6
+  Ownership = "Public"
+  Phone = "(336) 222-7000"
+  Rating = "Warm"
+  SLAExpirationDate__c = "2024-12-06"
+  SLASerialNumber__c = "5367"
+  SLA__c = "Silver"
+  Sic = "546732"
+  TickerSymbol = "BTXT"
+  Type = "Customer - Direct"
+  UpsellOpportunity__c = "Maybe"
+  Website = "www.burlington.com"
+  _alias = "Burlington Textiles Corp of Americana"
+}

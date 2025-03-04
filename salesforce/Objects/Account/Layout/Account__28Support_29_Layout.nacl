@@ -55,6 +55,10 @@ salesforce.Layout Account_Account__28Support_29_Layout@bspps {
               behavior = "Edit"
               field = salesforce.Account.field.picklist_field2__c
             },
+            {
+              behavior = "Edit"
+              field = salesforce.Account.field.hidden_firld_try__c
+            },
           ]
         },
         {

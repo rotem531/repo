@@ -322,5 +322,6 @@ type salesforce.Account {
   feedHistoryTrackedFields = {
     Name = salesforce.Account.field.Name
     OwnerId = salesforce.Account.field.OwnerId
+    SBQQ__TaxExempt__c = salesforce.Account.field.SBQQ__TaxExempt__c
   }
 }

@@ -10,6 +10,10 @@ salesforce.Layout ConsumptionSchedule_Consumption_Schedule_Layout@bss {
           layoutItems = [
             {
               behavior = "Required"
+              field = salesforce.ConsumptionSchedule.field.SBQQ__Category__c
+            },
+            {
+              behavior = "Required"
               field = salesforce.ConsumptionSchedule.field.Name
             },
             {
@@ -85,6 +89,11 @@ salesforce.Layout ConsumptionSchedule_Consumption_Schedule_Layout@bss {
       style = "CustomLinks"
     },
   ]
+  miniLayout = {
+    fields = [
+      "SBQQ__Category__c",
+    ]
+  }
   relatedLists = [
     {
       fields = [

@@ -541,6 +541,462 @@ salesforce.SearchSettings {
       {
         enhancedLookupEnabled = false
         lookupAutoCompleteEnabled = false
+        name = "SBQQ__AttributeSet__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__AttributeValue__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__BlockPrice__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ColumnMetadata__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ConfigurationAttribute__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ConfigurationRule__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ContractedPrice__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__Cost__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__CustomActionCondition__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__CustomAction__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__CustomScript__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__Dimension__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__DiscountCategory__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__DiscountSchedule__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__DiscountTier__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ErrorCondition__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__FavoriteProduct__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__FavoriteShare__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__Favorite__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__FieldSetMetadata__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ImportColumn__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ImportFormat__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__InstallProcessorLog__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__LineColumn__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__Localization__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__LookupData__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__LookupQuery__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__OptionConstraint__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__OrderItemConsumptionRate__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__OrderItemConsumptionSchedule__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__PriceAction__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__PriceCondition__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__PriceRule__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__PriceSchedule__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__PriceTier__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__PricingGuidanceTier__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__PricingGuidance__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProcessInputCondition__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProcessInputValue__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProcessInput__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProductAction__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProductAttributeSet__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProductAttribute__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProductFeature__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProductOption__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__ProductRule__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteDocument__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteLineConsumptionRate__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteLineConsumptionSchedule__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteLineGroup__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteLinePricingGuidance__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteLine__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteProcess__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteTemplate__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__QuoteTerm__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__Quote__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__RecordJob__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__RelatedContent__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SearchFilter__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SearchIndex__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SolutionGroup__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SubscribedAsset__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SubscribedQuoteLine__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SubscriptionConsumptionRate__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SubscriptionConsumptionSchedule__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__Subscription__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__SummaryVariable__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__TaxExemptionCertificate__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__TemplateContent__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__TemplateSection__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__TermCondition__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__Theme__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__TimingLog__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__UpgradeSource__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__WebQuoteLine__c"
+        resultsPerPageCount = 0
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
+        name = "SBQQ__WebQuote__c"
+        resultsPerPageCount = 25
+      },
+      {
+        enhancedLookupEnabled = false
+        lookupAutoCompleteEnabled = false
         name = salesforce.ServiceContract
         resultsPerPageCount = 25
       },

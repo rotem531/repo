@@ -2,7 +2,7 @@ salesforce.Product2 "01td2000005rQeDAAU" {
   Family = "None"
   IsActive = false
   Name = "test test"
-  ProductCode = "codi"
+  ProductCode = "codico"
   SBQQ__AssetAmendmentBehavior__c = "Default"
   SBQQ__AssetConversion__c = "One per quote line"
   SBQQ__BlockPricingField__c = "Quantity"
@@ -33,5 +33,5 @@ salesforce.Product2 "01td2000005rQeDAAU" {
   SBQQ__SubscriptionBase__c = "List"
   SBQQ__SubscriptionType__c = "Renewable"
   SBQQ__Taxable__c = false
-  _alias = "codi None test test"
+  _alias = "codico None test test"
 }

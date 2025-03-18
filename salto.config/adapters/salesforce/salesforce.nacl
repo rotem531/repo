@@ -2,11 +2,21 @@ salesforce {
   fetch = {
     metadata = {
       include = [
+        // {
+        //   metadataType = ".*"
+        //   namespace = ""
+        //   name = ".*"
+        // },
         {
           metadataType = ".*"
-          namespace = ""
+          namespace = "SBQQ"
           name = ".*"
         },
+        {
+          metadataType = ".*"
+          namespace = "sbaa"
+          name = ".*"
+        }
       ]
       exclude = [
         {
@@ -151,12 +161,13 @@ salesforce {
         "sbaa__EmailTemplate__c",
         "sbaa__TrackedField__c",
         "Product2",
+
       ]
       excludeObjects = [
         "SBQQ__ContractedPrice__c",
         "SBQQ__Quote__c",
         "SBQQ__QuoteDocument__c",
-        "SBQQ__QuoteLine__c",
+        // "SBQQ__QuoteLine__c",
         "SBQQ__QuoteLineGroup__c",
         "SBQQ__Subscription__c",
         "SBQQ__SubscribedAsset__c",

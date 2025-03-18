@@ -167,7 +167,7 @@ salesforce {
         "SBQQ__ContractedPrice__c",
         "SBQQ__Quote__c",
         "SBQQ__QuoteDocument__c",
-        // "SBQQ__QuoteLine__c",
+        "SBQQ__QuoteLine__c",
         "SBQQ__QuoteLineGroup__c",
         "SBQQ__Subscription__c",
         "SBQQ__SubscribedAsset__c",

@@ -8,7 +8,7 @@ type salesforce.SBQQ__SummaryVariable__c {
     trackTrending = false
     valueSet = [
       {
-        fullName = "Quantity"
+        fullName = salesforce.SBQQ__QuoteLine__c.field.SBQQ__Quantity__c
         default = false
         label = "Quantity"
       },
@@ -23,7 +23,7 @@ type salesforce.SBQQ__SummaryVariable__c {
         label = "famous"
       },
       {
-        fullName = "SBQQ__Quote__c"
+        fullName = salesforce.SBQQ__QuoteLine__c.field.SBQQ__Quote__c
         default = false
         label = "SBQQ__Quote__c"
       },
@@ -33,7 +33,7 @@ type salesforce.SBQQ__SummaryVariable__c {
         label = "rotem"
       },
       {
-        fullName = "SBQQ__Renewal__c"
+        fullName = salesforce.SBQQ__QuoteLine__c.field.SBQQ__Renewal__c
         default = false
         label = "SBQQ__Renewal__c"
       },

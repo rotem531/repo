@@ -1,8 +1,8 @@
 salesforce.SBQQ__SummaryVariable__c a1Dd20000004ag1EAA {
-  SBQQ__AggregateField__c = "Quantity"
-  SBQQ__AggregateFunction__c = "Sum"
-  SBQQ__Scope__c = "Quote"
-  SBQQ__TargetObject__c = "Product Option"
+  SBQQ__AggregateField__c = salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateField__c.valueSet.values.Quantity.fullName
+  SBQQ__AggregateFunction__c = salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateFunction__c.valueSet.values.Sum.fullName
+  SBQQ__Scope__c = salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Scope__c.valueSet.values.Quote.fullName
+  SBQQ__TargetObject__c = salesforce.SBQQ__SummaryVariable__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s.fullName
   Name = "test variable summary"
   _alias = "test variable summary"
 }

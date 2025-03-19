@@ -1,11 +1,11 @@
 salesforce.SBQQ__DiscountSchedule__c a0Hd20000005KxNEAU {
   SBQQ__CrossOrders__c = false
   SBQQ__CrossProducts__c = false
-  SBQQ__DiscountUnit__c = "Percent"
+  SBQQ__DiscountUnit__c = salesforce.SBQQ__DiscountSchedule__c.field.SBQQ__DiscountUnit__c.valueSet.values.Percent.fullName
   SBQQ__IncludeBundledProducts__c = false
   SBQQ__PriceScale__c = 2
-  SBQQ__QuoteLineQuantityField__c = "Quantity"
-  SBQQ__Type__c = "Range"
+  SBQQ__QuoteLineQuantityField__c = salesforce.SBQQ__DiscountSchedule__c.field.SBQQ__QuoteLineQuantityField__c.valueSet.values.Quantity.fullName
+  SBQQ__Type__c = salesforce.SBQQ__DiscountSchedule__c.field.SBQQ__Type__c.valueSet.values.Range.fullName
   SBQQ__UsePriceForAmount__c = false
   SBQQ__UserDefined__c = false
   Name = "test schedule"

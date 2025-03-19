@@ -206,18 +206,24 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "\"By Subscription End Date\" creates a separate Contract for each unique Subscription End Date, containing only those Subscriptions. \"Single Contract\" creates one Contract containing all Subscriptions, regardless of their End Dates."
     label = "Contracting Method"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "By Subscription End Date"
-        default = true
-        label = "By Subscription End Date"
-      },
-      {
-        fullName = "Single Contract"
-        default = false
-        label = "Single Contract"
-      },
-    ]
+    valueSet = {
+      values = {
+        By_Subscription_End_Date@s = {
+          fullName = "By Subscription End Date"
+          default = true
+          label = "By Subscription End Date"
+        }
+        Single_Contract@s = {
+          fullName = "Single Contract"
+          default = false
+          label = "Single Contract"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__ContractingMethod__c.valueSet.values.By_Subscription_End_Date@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ContractingMethod__c.valueSet.values.Single_Contract@s,
+      ]
+    }
     sorted = false
     restricted = true
     createable = true
@@ -308,18 +314,24 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "Method used to deliver products on this quote."
     label = "Delivery Method"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Download"
-        default = false
-        label = "Download"
-      },
-      {
-        fullName = "Ship"
-        default = false
-        label = "Ship"
-      },
-    ]
+    valueSet = {
+      values = {
+        Download = {
+          fullName = "Download"
+          default = false
+          label = "Download"
+        }
+        Ship = {
+          fullName = "Ship"
+          default = false
+          label = "Ship"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__DeliveryMethod__c.valueSet.values.Download,
+        salesforce.SBQQ__Quote__c.field.SBQQ__DeliveryMethod__c.valueSet.values.Ship,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -363,23 +375,30 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "Indicates the status of your Document: Pending, Sent, Failed."
     label = "Document Status"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Pending"
-        default = false
-        label = "Pending"
-      },
-      {
-        fullName = "Sent"
-        default = false
-        label = "Sent"
-      },
-      {
-        fullName = "Failed"
-        default = false
-        label = "Failed"
-      },
-    ]
+    valueSet = {
+      values = {
+        Pending = {
+          fullName = "Pending"
+          default = false
+          label = "Pending"
+        }
+        Sent = {
+          fullName = "Sent"
+          default = false
+          label = "Sent"
+        }
+        Failed = {
+          fullName = "Failed"
+          default = false
+          label = "Failed"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__DocumentStatus__c.valueSet.values.Pending,
+        salesforce.SBQQ__Quote__c.field.SBQQ__DocumentStatus__c.valueSet.values.Sent,
+        salesforce.SBQQ__Quote__c.field.SBQQ__DocumentStatus__c.valueSet.values.Failed,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -442,23 +461,30 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "Will generate a contracted price based on all adjusted quote line on quote if flagged."
     label = "Generate Contracted Price"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Price"
-        default = false
-        label = "Price"
-      },
-      {
-        fullName = "Discount Schedule"
-        default = false
-        label = "Discount Schedule"
-      },
-      {
-        fullName = "Do Not Generate"
-        default = false
-        label = "Do Not Generate"
-      },
-    ]
+    valueSet = {
+      values = {
+        Price = {
+          fullName = "Price"
+          default = false
+          label = "Price"
+        }
+        Discount_Schedule@s = {
+          fullName = "Discount Schedule"
+          default = false
+          label = "Discount Schedule"
+        }
+        Do_Not_Generate@s = {
+          fullName = "Do Not Generate"
+          default = false
+          label = "Do Not Generate"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__GenerateContractedPrice__c.valueSet.values.Price,
+        salesforce.SBQQ__Quote__c.field.SBQQ__GenerateContractedPrice__c.valueSet.values.Discount_Schedule@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__GenerateContractedPrice__c.valueSet.values.Do_Not_Generate@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -717,18 +743,24 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "The Quote Line field used to determine order grouping."
     label = "Order By"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "ProductFamily__c"
-        default = false
-        label = "ProductFamily__c"
-      },
-      {
-        fullName = "QuantityBasedFormulaField__c"
-        default = false
-        label = "QuantityBasedFormulaField__c"
-      },
-    ]
+    valueSet = {
+      values = {
+        ProductFamily__c = {
+          fullName = "ProductFamily__c"
+          default = false
+          label = "ProductFamily__c"
+        }
+        QuantityBasedFormulaField__c = {
+          fullName = "QuantityBasedFormulaField__c"
+          default = false
+          label = "QuantityBasedFormulaField__c"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__OrderBy__c.valueSet.values.ProductFamily__c,
+        salesforce.SBQQ__Quote__c.field.SBQQ__OrderBy__c.valueSet.values.QuantityBasedFormulaField__c,
+      ]
+    }
     sorted = false
     restricted = true
     createable = true
@@ -829,38 +861,48 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "Terms that govern payment of the items in this quote."
     label = "Payment Terms"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Due on receipt"
-        default = false
-        label = "Due on receipt"
-      },
-      {
-        fullName = "Net 15"
-        default = false
-        label = "Net 15"
-      },
-      {
-        fullName = "Net 30"
-        default = true
-        label = "Net 30"
-      },
-      {
-        fullName = "Net 45"
-        default = false
-        label = "Net 45"
-      },
-      {
-        fullName = "Net 60"
-        default = false
-        label = "Net 60"
-      },
-      {
-        fullName = "Net 90"
-        default = false
-        label = "Net 90"
-      },
-    ]
+    valueSet = {
+      values = {
+        Due_on_receipt@s = {
+          fullName = "Due on receipt"
+          default = false
+          label = "Due on receipt"
+        }
+        Net_15@s = {
+          fullName = "Net 15"
+          default = false
+          label = "Net 15"
+        }
+        Net_30@s = {
+          fullName = "Net 30"
+          default = true
+          label = "Net 30"
+        }
+        Net_45@s = {
+          fullName = "Net 45"
+          default = false
+          label = "Net 45"
+        }
+        Net_60@s = {
+          fullName = "Net 60"
+          default = false
+          label = "Net 60"
+        }
+        Net_90@s = {
+          fullName = "Net 90"
+          default = false
+          label = "Net 90"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Due_on_receipt@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_15@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_30@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_45@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_60@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_90@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -935,163 +977,198 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "When an order is created from this quote, the value in this field is copied to the order’s Billing Day of Month field."
     label = "Proration Day Of Month"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "1"
-        default = false
-        label = "1"
-      },
-      {
-        fullName = "2"
-        default = false
-        label = "2"
-      },
-      {
-        fullName = "3"
-        default = false
-        label = "3"
-      },
-      {
-        fullName = "4"
-        default = false
-        label = "4"
-      },
-      {
-        fullName = "5"
-        default = false
-        label = "5"
-      },
-      {
-        fullName = "6"
-        default = false
-        label = "6"
-      },
-      {
-        fullName = "7"
-        default = false
-        label = "7"
-      },
-      {
-        fullName = "8"
-        default = false
-        label = "8"
-      },
-      {
-        fullName = "9"
-        default = false
-        label = "9"
-      },
-      {
-        fullName = "10"
-        default = false
-        label = "10"
-      },
-      {
-        fullName = "11"
-        default = false
-        label = "11"
-      },
-      {
-        fullName = "12"
-        default = false
-        label = "12"
-      },
-      {
-        fullName = "13"
-        default = false
-        label = "13"
-      },
-      {
-        fullName = "14"
-        default = false
-        label = "14"
-      },
-      {
-        fullName = "15"
-        default = false
-        label = "15"
-      },
-      {
-        fullName = "16"
-        default = false
-        label = "16"
-      },
-      {
-        fullName = "17"
-        default = false
-        label = "17"
-      },
-      {
-        fullName = "18"
-        default = false
-        label = "18"
-      },
-      {
-        fullName = "19"
-        default = false
-        label = "19"
-      },
-      {
-        fullName = "20"
-        default = false
-        label = "20"
-      },
-      {
-        fullName = "21"
-        default = false
-        label = "21"
-      },
-      {
-        fullName = "22"
-        default = false
-        label = "22"
-      },
-      {
-        fullName = "23"
-        default = false
-        label = "23"
-      },
-      {
-        fullName = "24"
-        default = false
-        label = "24"
-      },
-      {
-        fullName = "25"
-        default = false
-        label = "25"
-      },
-      {
-        fullName = "26"
-        default = false
-        label = "26"
-      },
-      {
-        fullName = "27"
-        default = false
-        label = "27"
-      },
-      {
-        fullName = "28"
-        default = false
-        label = "28"
-      },
-      {
-        fullName = "29"
-        default = false
-        label = "29"
-      },
-      {
-        fullName = "30"
-        default = false
-        label = "30"
-      },
-      {
-        fullName = "31"
-        default = false
-        label = "31"
-      },
-    ]
+    valueSet = {
+      values = {
+        "1@" = {
+          fullName = "1"
+          default = false
+          label = "1"
+        }
+        "2@" = {
+          fullName = "2"
+          default = false
+          label = "2"
+        }
+        "3@" = {
+          fullName = "3"
+          default = false
+          label = "3"
+        }
+        "4@" = {
+          fullName = "4"
+          default = false
+          label = "4"
+        }
+        "5@" = {
+          fullName = "5"
+          default = false
+          label = "5"
+        }
+        "6@" = {
+          fullName = "6"
+          default = false
+          label = "6"
+        }
+        "7@" = {
+          fullName = "7"
+          default = false
+          label = "7"
+        }
+        "8@" = {
+          fullName = "8"
+          default = false
+          label = "8"
+        }
+        "9@" = {
+          fullName = "9"
+          default = false
+          label = "9"
+        }
+        "10@" = {
+          fullName = "10"
+          default = false
+          label = "10"
+        }
+        "11@" = {
+          fullName = "11"
+          default = false
+          label = "11"
+        }
+        "12@" = {
+          fullName = "12"
+          default = false
+          label = "12"
+        }
+        "13@" = {
+          fullName = "13"
+          default = false
+          label = "13"
+        }
+        "14@" = {
+          fullName = "14"
+          default = false
+          label = "14"
+        }
+        "15@" = {
+          fullName = "15"
+          default = false
+          label = "15"
+        }
+        "16@" = {
+          fullName = "16"
+          default = false
+          label = "16"
+        }
+        "17@" = {
+          fullName = "17"
+          default = false
+          label = "17"
+        }
+        "18@" = {
+          fullName = "18"
+          default = false
+          label = "18"
+        }
+        "19@" = {
+          fullName = "19"
+          default = false
+          label = "19"
+        }
+        "20@" = {
+          fullName = "20"
+          default = false
+          label = "20"
+        }
+        "21@" = {
+          fullName = "21"
+          default = false
+          label = "21"
+        }
+        "22@" = {
+          fullName = "22"
+          default = false
+          label = "22"
+        }
+        "23@" = {
+          fullName = "23"
+          default = false
+          label = "23"
+        }
+        "24@" = {
+          fullName = "24"
+          default = false
+          label = "24"
+        }
+        "25@" = {
+          fullName = "25"
+          default = false
+          label = "25"
+        }
+        "26@" = {
+          fullName = "26"
+          default = false
+          label = "26"
+        }
+        "27@" = {
+          fullName = "27"
+          default = false
+          label = "27"
+        }
+        "28@" = {
+          fullName = "28"
+          default = false
+          label = "28"
+        }
+        "29@" = {
+          fullName = "29"
+          default = false
+          label = "29"
+        }
+        "30@" = {
+          fullName = "30"
+          default = false
+          label = "30"
+        }
+        "31@" = {
+          fullName = "31"
+          default = false
+          label = "31"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.1@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.2@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.3@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.4@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.5@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.6@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.7@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.8@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.9@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.10@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.11@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.12@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.13@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.14@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.15@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.16@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.17@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.18@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.19@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.20@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.21@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.22@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.23@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.24@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.25@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.26@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.27@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.28@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.29@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.30@,
+        salesforce.SBQQ__Quote__c.field.SBQQ__ProrationDayOfMonth__c.valueSet.values.31@,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1105,98 +1182,120 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "Language used for this Quote when mass generating Quote Documents"
     label = "Quote Language"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Danish"
-        default = false
-        label = "Danish"
-      },
-      {
-        fullName = "German"
-        default = false
-        label = "German"
-      },
-      {
-        fullName = "English"
-        default = false
-        label = "English"
-      },
-      {
-        fullName = "Spanish"
-        default = false
-        label = "Spanish"
-      },
-      {
-        fullName = "Spanish (Mexican)"
-        default = false
-        label = "Spanish (Mexican)"
-      },
-      {
-        fullName = "Finnish"
-        default = false
-        label = "Finnish"
-      },
-      {
-        fullName = "French"
-        default = false
-        label = "French"
-      },
-      {
-        fullName = "Italian"
-        default = false
-        label = "Italian"
-      },
-      {
-        fullName = "Japanese"
-        default = false
-        label = "Japanese"
-      },
-      {
-        fullName = "Korean"
-        default = false
-        label = "Korean"
-      },
-      {
-        fullName = "Dutch"
-        default = false
-        label = "Dutch"
-      },
-      {
-        fullName = "Norwegian"
-        default = false
-        label = "Norwegian"
-      },
-      {
-        fullName = "Portuguese (Brazilian)"
-        default = false
-        label = "Portuguese (Brazilian)"
-      },
-      {
-        fullName = "Russian"
-        default = false
-        label = "Russian"
-      },
-      {
-        fullName = "Swedish"
-        default = false
-        label = "Swedish"
-      },
-      {
-        fullName = "Thai"
-        default = false
-        label = "Thai"
-      },
-      {
-        fullName = "Chinese (Simplified)"
-        default = false
-        label = "Chinese (Simplified)"
-      },
-      {
-        fullName = "Chinese (Traditional)"
-        default = false
-        label = "Chinese (Traditional)"
-      },
-    ]
+    valueSet = {
+      values = {
+        Danish = {
+          fullName = "Danish"
+          default = false
+          label = "Danish"
+        }
+        German = {
+          fullName = "German"
+          default = false
+          label = "German"
+        }
+        English = {
+          fullName = "English"
+          default = false
+          label = "English"
+        }
+        Spanish = {
+          fullName = "Spanish"
+          default = false
+          label = "Spanish"
+        }
+        Spanish__Mexican_@sjk = {
+          fullName = "Spanish (Mexican)"
+          default = false
+          label = "Spanish (Mexican)"
+        }
+        Finnish = {
+          fullName = "Finnish"
+          default = false
+          label = "Finnish"
+        }
+        French = {
+          fullName = "French"
+          default = false
+          label = "French"
+        }
+        Italian = {
+          fullName = "Italian"
+          default = false
+          label = "Italian"
+        }
+        Japanese = {
+          fullName = "Japanese"
+          default = false
+          label = "Japanese"
+        }
+        Korean = {
+          fullName = "Korean"
+          default = false
+          label = "Korean"
+        }
+        Dutch = {
+          fullName = "Dutch"
+          default = false
+          label = "Dutch"
+        }
+        Norwegian = {
+          fullName = "Norwegian"
+          default = false
+          label = "Norwegian"
+        }
+        Portuguese__Brazilian_@sjk = {
+          fullName = "Portuguese (Brazilian)"
+          default = false
+          label = "Portuguese (Brazilian)"
+        }
+        Russian = {
+          fullName = "Russian"
+          default = false
+          label = "Russian"
+        }
+        Swedish = {
+          fullName = "Swedish"
+          default = false
+          label = "Swedish"
+        }
+        Thai = {
+          fullName = "Thai"
+          default = false
+          label = "Thai"
+        }
+        Chinese__Simplified_@sjk = {
+          fullName = "Chinese (Simplified)"
+          default = false
+          label = "Chinese (Simplified)"
+        }
+        Chinese__Traditional_@sjk = {
+          fullName = "Chinese (Traditional)"
+          default = false
+          label = "Chinese (Traditional)"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Danish,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.German,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.English,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Spanish,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Spanish__Mexican_@sjk,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Finnish,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.French,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Italian,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Japanese,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Korean,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Dutch,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Norwegian,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Portuguese__Brazilian_@sjk,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Russian,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Swedish,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Thai,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Chinese__Simplified_@sjk,
+        salesforce.SBQQ__Quote__c.field.SBQQ__QuoteLanguage__c.valueSet.values.Chinese__Traditional_@sjk,
+      ]
+    }
     sorted = false
     restricted = true
     createable = true
@@ -1420,43 +1519,54 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "Status indicating where quote is in its lifecycle."
     label = "Status"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Draft"
-        default = true
-        label = "Draft"
-      },
-      {
-        fullName = "In Review"
-        default = false
-        label = "In Review"
-      },
-      {
-        fullName = "Approved"
-        default = false
-        label = "Approved"
-      },
-      {
-        fullName = "Denied"
-        default = false
-        label = "Denied"
-      },
-      {
-        fullName = "Presented"
-        default = false
-        label = "Presented"
-      },
-      {
-        fullName = "Accepted"
-        default = false
-        label = "Accepted"
-      },
-      {
-        fullName = "Rejected"
-        default = false
-        label = "Rejected"
-      },
-    ]
+    valueSet = {
+      values = {
+        Draft = {
+          fullName = "Draft"
+          default = true
+          label = "Draft"
+        }
+        In_Review@s = {
+          fullName = "In Review"
+          default = false
+          label = "In Review"
+        }
+        Approved = {
+          fullName = "Approved"
+          default = false
+          label = "Approved"
+        }
+        Denied = {
+          fullName = "Denied"
+          default = false
+          label = "Denied"
+        }
+        Presented = {
+          fullName = "Presented"
+          default = false
+          label = "Presented"
+        }
+        Accepted = {
+          fullName = "Accepted"
+          default = false
+          label = "Accepted"
+        }
+        Rejected = {
+          fullName = "Rejected"
+          default = false
+          label = "Rejected"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__Status__c.valueSet.values.Draft,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Status__c.valueSet.values.In_Review@s,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Status__c.valueSet.values.Approved,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Status__c.valueSet.values.Denied,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Status__c.valueSet.values.Presented,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Status__c.valueSet.values.Accepted,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Status__c.valueSet.values.Rejected,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1522,28 +1632,36 @@ type salesforce.SBQQ__Quote__c {
     inlineHelpText = "Indicates the type of quote."
     label = "Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = true
-        label = "Quote"
-      },
-      {
-        fullName = "Renewal"
-        default = false
-        label = "Renewal"
-      },
-      {
-        fullName = "Amendment"
-        default = false
-        label = "Amendment"
-      },
-      {
-        fullName = "Re-Quote"
-        default = false
-        label = "Re-Quote"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = true
+          label = "Quote"
+        }
+        Renewal = {
+          fullName = "Renewal"
+          default = false
+          label = "Renewal"
+        }
+        Amendment = {
+          fullName = "Amendment"
+          default = false
+          label = "Amendment"
+        }
+        Re_Quote@b = {
+          fullName = "Re-Quote"
+          default = false
+          label = "Re-Quote"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Quote__c.field.SBQQ__Type__c.valueSet.values.Quote,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Type__c.valueSet.values.Renewal,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Type__c.valueSet.values.Amendment,
+        salesforce.SBQQ__Quote__c.field.SBQQ__Type__c.valueSet.values.Re_Quote@b,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

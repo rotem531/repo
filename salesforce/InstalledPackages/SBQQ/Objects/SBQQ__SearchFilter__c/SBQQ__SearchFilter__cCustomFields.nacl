@@ -39,33 +39,39 @@ type salesforce.SBQQ__SearchFilter__c {
     inlineHelpText = "Field that sources value for use in filtering."
     label = "Filter Source Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Type"
-        default = false
-        label = "Type"
-      },
-      {
-        fullName = "Status"
-        default = false
-        label = "Status"
-      },
-    ]
+    valueSet = {
+      values = {
+        Type = {
+          fullName = "Type"
+          default = false
+          label = "Type"
+        }
+        Status = {
+          fullName = "Status"
+          default = false
+          label = "Status"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__FilterSourceField__c.valueSet.values.Type,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__FilterSourceField__c.valueSet.values.Status,
+      ]
+    }
     sorted = false
     restricted = false
     fieldDependency = {
       controllingField = "SBQQ__FilterSourceObject__c"
       valueSettings = [
         {
-          valueName = "Type"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__FilterSourceField__c.valueSet.values.Type.fullName
           controllingFieldValue = [
-            "Quote",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__FilterSourceObject__c.valueSet.values.Quote.fullName,
           ]
         },
         {
-          valueName = "Status"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__FilterSourceField__c.valueSet.values.Status.fullName
           controllingFieldValue = [
-            "Quote",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__FilterSourceObject__c.valueSet.values.Quote.fullName,
           ]
         },
       ]
@@ -81,13 +87,18 @@ type salesforce.SBQQ__SearchFilter__c {
     inlineHelpText = "Object that sources value for use in filtering."
     label = "Filter Source Object"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = false
-        label = "Quote"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = false
+          label = "Quote"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__FilterSourceObject__c.valueSet.values.Quote,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -116,22 +127,27 @@ type salesforce.SBQQ__SearchFilter__c {
     inlineHelpText = "Specify the field that sources value for use in determining whether the filter is hidden."
     label = "Hidden Source Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Primary"
-        default = false
-        label = "Primary"
-      },
-    ]
+    valueSet = {
+      values = {
+        Primary = {
+          fullName = "Primary"
+          default = false
+          label = "Primary"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__HiddenSourceField__c.valueSet.values.Primary,
+      ]
+    }
     sorted = false
     restricted = false
     fieldDependency = {
       controllingField = "SBQQ__HiddenSourceObject__c"
       valueSettings = [
         {
-          valueName = "Primary"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__HiddenSourceField__c.valueSet.values.Primary.fullName
           controllingFieldValue = [
-            "Quote",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__HiddenSourceObject__c.valueSet.values.Quote.fullName,
           ]
         },
       ]
@@ -147,13 +163,18 @@ type salesforce.SBQQ__SearchFilter__c {
     inlineHelpText = "Specify object that sources value for use in determining whether the filter is hidden."
     label = "Hidden Source Object"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = false
-        label = "Quote"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = false
+          label = "Quote"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__HiddenSourceObject__c.valueSet.values.Quote,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -179,58 +200,72 @@ type salesforce.SBQQ__SearchFilter__c {
     inlineHelpText = "Specify the operator to use with this filter."
     label = "Operator"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "equals"
-        default = false
-        label = "equals"
-      },
-      {
-        fullName = "not equals"
-        default = false
-        label = "not equals"
-      },
-      {
-        fullName = "less than"
-        default = false
-        label = "less than"
-      },
-      {
-        fullName = "less or equals"
-        default = false
-        label = "less or equals"
-      },
-      {
-        fullName = "greater than"
-        default = false
-        label = "greater than"
-      },
-      {
-        fullName = "greater or equals"
-        default = false
-        label = "greater or equals"
-      },
-      {
-        fullName = "starts with"
-        default = false
-        label = "starts with"
-      },
-      {
-        fullName = "ends with"
-        default = false
-        label = "ends with"
-      },
-      {
-        fullName = "contains"
-        default = false
-        label = "contains"
-      },
-      {
-        fullName = "between"
-        default = false
-        label = "between"
-      },
-    ]
+    valueSet = {
+      values = {
+        equals = {
+          fullName = "equals"
+          default = false
+          label = "equals"
+        }
+        not_equals@s = {
+          fullName = "not equals"
+          default = false
+          label = "not equals"
+        }
+        less_than@s = {
+          fullName = "less than"
+          default = false
+          label = "less than"
+        }
+        less_or_equals@s = {
+          fullName = "less or equals"
+          default = false
+          label = "less or equals"
+        }
+        greater_than@s = {
+          fullName = "greater than"
+          default = false
+          label = "greater than"
+        }
+        greater_or_equals@s = {
+          fullName = "greater or equals"
+          default = false
+          label = "greater or equals"
+        }
+        starts_with@s = {
+          fullName = "starts with"
+          default = false
+          label = "starts with"
+        }
+        ends_with@s = {
+          fullName = "ends with"
+          default = false
+          label = "ends with"
+        }
+        contains = {
+          fullName = "contains"
+          default = false
+          label = "contains"
+        }
+        between = {
+          fullName = "between"
+          default = false
+          label = "between"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.equals,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.less_than@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.less_or_equals@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.greater_than@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.greater_or_equals@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.starts_with@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.ends_with@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.contains,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__Operator__c.valueSet.values.between,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -244,83 +279,93 @@ type salesforce.SBQQ__SearchFilter__c {
     inlineHelpText = "Specify the field to search."
     label = "Target Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Name"
-        default = false
-        label = "Name"
-      },
-      {
-        fullName = "Product Code"
-        default = false
-        label = "Product Code"
-      },
-      {
-        fullName = "Product Family"
-        default = false
-        label = "Product Family"
-      },
-      {
-        fullName = "Product Description"
-        default = false
-        label = "Product Description"
-      },
-      {
-        fullName = "Quantity"
-        default = false
-        label = "Quantity"
-      },
-      {
-        fullName = "Status"
-        default = false
-        label = "Status"
-      },
-    ]
+    valueSet = {
+      values = {
+        Name = {
+          fullName = "Name"
+          default = false
+          label = "Name"
+        }
+        Product_Code@s = {
+          fullName = "Product Code"
+          default = false
+          label = "Product Code"
+        }
+        Product_Family@s = {
+          fullName = "Product Family"
+          default = false
+          label = "Product Family"
+        }
+        Product_Description@s = {
+          fullName = "Product Description"
+          default = false
+          label = "Product Description"
+        }
+        Quantity = {
+          fullName = "Quantity"
+          default = false
+          label = "Quantity"
+        }
+        Status = {
+          fullName = "Status"
+          default = false
+          label = "Status"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Name,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Product_Code@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Product_Family@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Product_Description@s,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Quantity,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Status,
+      ]
+    }
     sorted = false
     restricted = false
     fieldDependency = {
       controllingField = "SBQQ__TargetObject__c"
       valueSettings = [
         {
-          valueName = "Name"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Name.fullName
           controllingFieldValue = [
-            "Product",
-            "Asset",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Product.fullName,
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Asset.fullName,
           ]
         },
         {
-          valueName = "Product Code"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Product_Code@s.fullName
           controllingFieldValue = [
-            "Product",
-            "Asset",
-            "Subscription",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Product.fullName,
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Asset.fullName,
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Subscription.fullName,
           ]
         },
         {
-          valueName = "Product Family"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Product_Family@s.fullName
           controllingFieldValue = [
-            "Product",
-            "Asset",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Product.fullName,
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Asset.fullName,
           ]
         },
         {
-          valueName = "Product Description"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Product_Description@s.fullName
           controllingFieldValue = [
-            "Product",
-            "Asset",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Product.fullName,
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Asset.fullName,
           ]
         },
         {
-          valueName = "Quantity"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Quantity.fullName
           controllingFieldValue = [
-            "Asset",
-            "Subscription",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Asset.fullName,
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Subscription.fullName,
           ]
         },
         {
-          valueName = "Status"
+          valueName = salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetField__c.valueSet.values.Status.fullName
           controllingFieldValue = [
-            "Asset",
+            salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Asset.fullName,
           ]
         },
       ]
@@ -336,23 +381,30 @@ type salesforce.SBQQ__SearchFilter__c {
     inlineHelpText = "Specify object to search."
     label = "Target Object"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product"
-        default = false
-        label = "Product"
-      },
-      {
-        fullName = "Asset"
-        default = false
-        label = "Asset"
-      },
-      {
-        fullName = "Subscription"
-        default = false
-        label = "Subscription"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product = {
+          fullName = "Product"
+          default = false
+          label = "Product"
+        }
+        Asset = {
+          fullName = "Asset"
+          default = false
+          label = "Asset"
+        }
+        Subscription = {
+          fullName = "Subscription"
+          default = false
+          label = "Subscription"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Product,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Asset,
+        salesforce.SBQQ__SearchFilter__c.field.SBQQ__TargetObject__c.valueSet.values.Subscription,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

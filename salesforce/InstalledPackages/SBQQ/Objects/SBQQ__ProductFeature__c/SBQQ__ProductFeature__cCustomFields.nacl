@@ -6,18 +6,24 @@ type salesforce.SBQQ__ProductFeature__c {
     inlineHelpText = "Assign this feature to a category such that multiple features with related options are grouped together."
     label = "Category"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Hardware"
-        default = false
-        label = "Hardware"
-      },
-      {
-        fullName = "Software"
-        default = false
-        label = "Software"
-      },
-    ]
+    valueSet = {
+      values = {
+        Hardware = {
+          fullName = "Hardware"
+          default = false
+          label = "Hardware"
+        }
+        Software = {
+          fullName = "Software"
+          default = false
+          label = "Software"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__Category__c.valueSet.values.Hardware,
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__Category__c.valueSet.values.Software,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -31,13 +37,18 @@ type salesforce.SBQQ__ProductFeature__c {
     inlineHelpText = "The API name of the field set that will be used for this feature during configuration."
     label = "Configuration Field Set"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "OptionConfiguration"
-        default = false
-        label = "OptionConfiguration"
-      },
-    ]
+    valueSet = {
+      values = {
+        OptionConfiguration = {
+          fullName = "OptionConfiguration"
+          default = false
+          label = "OptionConfiguration"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__ConfigurationFieldSet__c.valueSet.values.OptionConfiguration,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -85,13 +96,18 @@ type salesforce.SBQQ__ProductFeature__c {
     inlineHelpText = "The API name of the field set that will be used when filtering dynamic options for this feature during configuration."
     label = "Dynamic Option Filter Field Set"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "ConfiguratorFilter"
-        default = false
-        label = "ConfiguratorFilter"
-      },
-    ]
+    valueSet = {
+      values = {
+        ConfiguratorFilter = {
+          fullName = "ConfiguratorFilter"
+          default = false
+          label = "ConfiguratorFilter"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__DynamicProductFilterFieldSet__c.valueSet.values.ConfiguratorFilter,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -105,13 +121,18 @@ type salesforce.SBQQ__ProductFeature__c {
     inlineHelpText = "The API name of the field set that will be used when viewing dynamic options for this feature during configuration."
     label = "Dynamic Option Lookup Field Set"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "ConfiguratorLookup"
-        default = false
-        label = "ConfiguratorLookup"
-      },
-    ]
+    valueSet = {
+      values = {
+        ConfiguratorLookup = {
+          fullName = "ConfiguratorLookup"
+          default = false
+          label = "ConfiguratorLookup"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__DynamicProductLookupFieldSet__c.valueSet.values.ConfiguratorLookup,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -173,23 +194,30 @@ type salesforce.SBQQ__ProductFeature__c {
     inlineHelpText = "Determines how user selects options attached to this product. \"Click\" method presents options with checkboxes next to them. \"Add\" renders a button which brings up predefined options. \"Dynamic\" renders a button which brings up all active products."
     label = "Option Selection Method"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Click"
-        default = false
-        label = "Click"
-      },
-      {
-        fullName = "Add"
-        default = false
-        label = "Add"
-      },
-      {
-        fullName = "Dynamic"
-        default = false
-        label = "Dynamic"
-      },
-    ]
+    valueSet = {
+      values = {
+        Click = {
+          fullName = "Click"
+          default = false
+          label = "Click"
+        }
+        Add = {
+          fullName = "Add"
+          default = false
+          label = "Add"
+        }
+        Dynamic = {
+          fullName = "Dynamic"
+          default = false
+          label = "Dynamic"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__OptionSelectionMethod__c.valueSet.values.Click,
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__OptionSelectionMethod__c.valueSet.values.Add,
+        salesforce.SBQQ__ProductFeature__c.field.SBQQ__OptionSelectionMethod__c.valueSet.values.Dynamic,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

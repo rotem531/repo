@@ -8,15 +8,15 @@ salesforce.RecordType SBQQ__ConfigurationAttribute__c_SBQQ__Global_Attribute {
       picklist = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__ColumnOrder__c
       values = [
         {
-          fullName = "1"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__ColumnOrder__c.valueSet.values.1@.fullName
           default = true
         },
         {
-          fullName = "2"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__ColumnOrder__c.valueSet.values.2@.fullName
           default = false
         },
         {
-          fullName = "3"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__ColumnOrder__c.valueSet.values.3@.fullName
           default = false
         },
       ]
@@ -38,11 +38,11 @@ salesforce.RecordType SBQQ__ConfigurationAttribute__c_SBQQ__Global_Attribute {
       picklist = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__Position__c
       values = [
         {
-          fullName = "Bottom"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__Position__c.valueSet.values.Bottom.fullName
           default = false
         },
         {
-          fullName = "Top"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__Position__c.valueSet.values.Top.fullName
           default = true
         },
       ]
@@ -51,15 +51,15 @@ salesforce.RecordType SBQQ__ConfigurationAttribute__c_SBQQ__Global_Attribute {
       picklist = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__TargetField__c
       values = [
         {
-          fullName = "Discount %28%25%29"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__TargetField__c.valueSet.values.Discount____@sjpk.fullName
           default = false
         },
         {
-          fullName = "Discount %28Amt%29"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__TargetField__c.valueSet.values.Discount__Amt_@sjk.fullName
           default = false
         },
         {
-          fullName = "Unit Price"
+          fullName = salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__TargetField__c.valueSet.values.Unit_Price@s.fullName
           default = false
         },
       ]

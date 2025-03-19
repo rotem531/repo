@@ -119,18 +119,24 @@ type salesforce.SBQQ__QuoteDocument__c {
     inlineHelpText = "Choose the output format for this document."
     label = "Output Format"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "PDF"
-        default = true
-        label = "PDF"
-      },
-      {
-        fullName = "MS Word"
-        default = false
-        label = "MS Word"
-      },
-    ]
+    valueSet = {
+      values = {
+        PDF = {
+          fullName = "PDF"
+          default = true
+          label = "PDF"
+        }
+        MS_Word@s = {
+          fullName = "MS Word"
+          default = false
+          label = "MS Word"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteDocument__c.field.SBQQ__OutputFormat__c.valueSet.values.PDF,
+        salesforce.SBQQ__QuoteDocument__c.field.SBQQ__OutputFormat__c.valueSet.values.MS_Word@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -214,33 +220,42 @@ type salesforce.SBQQ__QuoteDocument__c {
     inlineHelpText = "Status of electronic signature."
     label = "Signature Status"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Pending"
-        default = false
-        label = "Pending"
-      },
-      {
-        fullName = "Sent"
-        default = false
-        label = "Sent"
-      },
-      {
-        fullName = "Signed"
-        default = false
-        label = "Signed"
-      },
-      {
-        fullName = "Expired"
-        default = false
-        label = "Expired"
-      },
-      {
-        fullName = "Revoked"
-        default = false
-        label = "Revoked"
-      },
-    ]
+    valueSet = {
+      values = {
+        Pending = {
+          fullName = "Pending"
+          default = false
+          label = "Pending"
+        }
+        Sent = {
+          fullName = "Sent"
+          default = false
+          label = "Sent"
+        }
+        Signed = {
+          fullName = "Signed"
+          default = false
+          label = "Signed"
+        }
+        Expired = {
+          fullName = "Expired"
+          default = false
+          label = "Expired"
+        }
+        Revoked = {
+          fullName = "Revoked"
+          default = false
+          label = "Revoked"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteDocument__c.field.SBQQ__SignatureStatus__c.valueSet.values.Pending,
+        salesforce.SBQQ__QuoteDocument__c.field.SBQQ__SignatureStatus__c.valueSet.values.Sent,
+        salesforce.SBQQ__QuoteDocument__c.field.SBQQ__SignatureStatus__c.valueSet.values.Signed,
+        salesforce.SBQQ__QuoteDocument__c.field.SBQQ__SignatureStatus__c.valueSet.values.Expired,
+        salesforce.SBQQ__QuoteDocument__c.field.SBQQ__SignatureStatus__c.valueSet.values.Revoked,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

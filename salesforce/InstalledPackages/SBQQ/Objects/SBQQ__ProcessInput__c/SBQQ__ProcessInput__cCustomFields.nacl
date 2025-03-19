@@ -16,18 +16,24 @@ type salesforce.SBQQ__ProcessInput__c {
     deprecated = false
     label = "Binary Choice"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Yes"
-        default = false
-        label = "Yes"
-      },
-      {
-        fullName = "No"
-        default = false
-        label = "No"
-      },
-    ]
+    valueSet = {
+      values = {
+        Yes = {
+          fullName = "Yes"
+          default = false
+          label = "Yes"
+        }
+        No = {
+          fullName = "No"
+          default = false
+          label = "No"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__BinaryChoice__c.valueSet.values.Yes,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__BinaryChoice__c.valueSet.values.No,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -41,18 +47,24 @@ type salesforce.SBQQ__ProcessInput__c {
     inlineHelpText = "Indicate which Process Input conditions must be met."
     label = "Conditions Met"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "All"
-        default = false
-        label = "All"
-      },
-      {
-        fullName = "Any"
-        default = false
-        label = "Any"
-      },
-    ]
+    valueSet = {
+      values = {
+        All = {
+          fullName = "All"
+          default = false
+          label = "All"
+        }
+        Any = {
+          fullName = "Any"
+          default = false
+          label = "Any"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__ConditionsMet__c.valueSet.values.All,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__ConditionsMet__c.valueSet.values.Any,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -66,18 +78,24 @@ type salesforce.SBQQ__ProcessInput__c {
     inlineHelpText = "Quote field that sources default value for this input."
     label = "Default Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Bill To Country"
-        default = false
-        label = "Bill To Country"
-      },
-      {
-        fullName = "Ship To Country"
-        default = false
-        label = "Ship To Country"
-      },
-    ]
+    valueSet = {
+      values = {
+        Bill_To_Country@s = {
+          fullName = "Bill To Country"
+          default = false
+          label = "Bill To Country"
+        }
+        Ship_To_Country@s = {
+          fullName = "Ship To Country"
+          default = false
+          label = "Ship To Country"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__DefaultField__c.valueSet.values.Bill_To_Country@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__DefaultField__c.valueSet.values.Ship_To_Country@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -108,18 +126,24 @@ type salesforce.SBQQ__ProcessInput__c {
     inlineHelpText = "Select the API name for the field that accepts the user entry."
     label = "Input Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "BinaryChoice__c"
-        default = false
-        label = "BinaryChoice__c"
-      },
-      {
-        fullName = "IntegerInput__c"
-        default = false
-        label = "IntegerInput__c"
-      },
-    ]
+    valueSet = {
+      values = {
+        BinaryChoice__c = {
+          fullName = "BinaryChoice__c"
+          default = false
+          label = "BinaryChoice__c"
+        }
+        IntegerInput__c = {
+          fullName = "IntegerInput__c"
+          default = false
+          label = "IntegerInput__c"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__InputField__c.valueSet.values.BinaryChoice__c,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__InputField__c.valueSet.values.IntegerInput__c,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -162,53 +186,66 @@ type salesforce.SBQQ__ProcessInput__c {
     inlineHelpText = "Select the operator to use when comparing the Input Field entry with the Product Field."
     label = "Operator"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "equals"
-        default = false
-        label = "equals"
-      },
-      {
-        fullName = "not equals"
-        default = false
-        label = "not equals"
-      },
-      {
-        fullName = "less than"
-        default = false
-        label = "less than"
-      },
-      {
-        fullName = "less or equals"
-        default = false
-        label = "less or equals"
-      },
-      {
-        fullName = "greater than"
-        default = false
-        label = "greater than"
-      },
-      {
-        fullName = "greater or equals"
-        default = false
-        label = "greater or equals"
-      },
-      {
-        fullName = "starts with"
-        default = false
-        label = "starts with"
-      },
-      {
-        fullName = "ends with"
-        default = false
-        label = "ends with"
-      },
-      {
-        fullName = "contains"
-        default = false
-        label = "contains"
-      },
-    ]
+    valueSet = {
+      values = {
+        equals = {
+          fullName = "equals"
+          default = false
+          label = "equals"
+        }
+        not_equals@s = {
+          fullName = "not equals"
+          default = false
+          label = "not equals"
+        }
+        less_than@s = {
+          fullName = "less than"
+          default = false
+          label = "less than"
+        }
+        less_or_equals@s = {
+          fullName = "less or equals"
+          default = false
+          label = "less or equals"
+        }
+        greater_than@s = {
+          fullName = "greater than"
+          default = false
+          label = "greater than"
+        }
+        greater_or_equals@s = {
+          fullName = "greater or equals"
+          default = false
+          label = "greater or equals"
+        }
+        starts_with@s = {
+          fullName = "starts with"
+          default = false
+          label = "starts with"
+        }
+        ends_with@s = {
+          fullName = "ends with"
+          default = false
+          label = "ends with"
+        }
+        contains = {
+          fullName = "contains"
+          default = false
+          label = "contains"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.equals,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.less_than@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.less_or_equals@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.greater_than@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.greater_or_equals@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.starts_with@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.ends_with@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__Operator__c.valueSet.values.contains,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -237,23 +274,30 @@ type salesforce.SBQQ__ProcessInput__c {
     inlineHelpText = "Field on Product object used in filtering products that match this input."
     label = "Product Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product Name"
-        default = false
-        label = "Product Name"
-      },
-      {
-        fullName = "Product Code"
-        default = false
-        label = "Product Code"
-      },
-      {
-        fullName = "Product Family"
-        default = false
-        label = "Product Family"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product_Name@s = {
+          fullName = "Product Name"
+          default = false
+          label = "Product Name"
+        }
+        Product_Code@s = {
+          fullName = "Product Code"
+          default = false
+          label = "Product Code"
+        }
+        Product_Family@s = {
+          fullName = "Product Family"
+          default = false
+          label = "Product Family"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__ProductField__c.valueSet.values.Product_Name@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__ProductField__c.valueSet.values.Product_Code@s,
+        salesforce.SBQQ__ProcessInput__c.field.SBQQ__ProductField__c.valueSet.values.Product_Family@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

@@ -126,28 +126,36 @@ type salesforce.SBQQ__Subscription__c {
     inlineHelpText = "Percent of Total scope set at the component level. This field overrides the Percent of Total scope copied from the Product Option."
     label = "Component Percent of Total Scope"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Package"
-        default = false
-        label = "Package"
-      },
-      {
-        fullName = "Components"
-        default = false
-        label = "Components"
-      },
-      {
-        fullName = "Both"
-        default = false
-        label = "Package & Components"
-      },
-      {
-        fullName = "Entire Hierarchy"
-        default = false
-        label = "Entire Hierarchy"
-      },
-    ]
+    valueSet = {
+      values = {
+        Package = {
+          fullName = "Package"
+          default = false
+          label = "Package"
+        }
+        Components = {
+          fullName = "Components"
+          default = false
+          label = "Components"
+        }
+        Both = {
+          fullName = "Both"
+          default = false
+          label = "Package & Components"
+        }
+        Entire_Hierarchy@s = {
+          fullName = "Entire Hierarchy"
+          default = false
+          label = "Entire Hierarchy"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Subscription__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Package,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Components,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Both,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Entire_Hierarchy@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -270,18 +278,24 @@ type salesforce.SBQQ__Subscription__c {
     inlineHelpText = "Discount schedule type. Copied from Type field in associated discount schedule."
     label = "Discount Schedule Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Range"
-        default = false
-        label = "Range"
-      },
-      {
-        fullName = "Slab"
-        default = false
-        label = "Slab"
-      },
-    ]
+    valueSet = {
+      values = {
+        Range = {
+          fullName = "Range"
+          default = false
+          label = "Range"
+        }
+        Slab = {
+          fullName = "Slab"
+          default = false
+          label = "Slab"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Subscription__c.field.SBQQ__DiscountScheduleType__c.valueSet.values.Range,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__DiscountScheduleType__c.valueSet.values.Slab,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -495,23 +509,30 @@ type salesforce.SBQQ__Subscription__c {
     inlineHelpText = "Indicates the Option Type, which is copied from related Product Option. Determines how quantity is calculated."
     label = "Option Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Component"
-        default = false
-        label = "Component"
-      },
-      {
-        fullName = "Accessory"
-        default = false
-        label = "Accessory"
-      },
-      {
-        fullName = "Related Product"
-        default = false
-        label = "Related Product"
-      },
-    ]
+    valueSet = {
+      values = {
+        Component = {
+          fullName = "Component"
+          default = false
+          label = "Component"
+        }
+        Accessory = {
+          fullName = "Accessory"
+          default = false
+          label = "Accessory"
+        }
+        Related_Product@s = {
+          fullName = "Related Product"
+          default = false
+          label = "Related Product"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Subscription__c.field.SBQQ__OptionType__c.valueSet.values.Component,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__OptionType__c.valueSet.values.Accessory,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__OptionType__c.valueSet.values.Related_Product@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -613,33 +634,42 @@ type salesforce.SBQQ__Subscription__c {
     inlineHelpText = "Indicates how the price for this line item is calculated. \"List\" = subtracting discount from list price. \"Cost\" = adding markup to cost."
     label = "Pricing Method"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "List"
-        default = true
-        label = "List"
-      },
-      {
-        fullName = "Cost"
-        default = false
-        label = "Cost"
-      },
-      {
-        fullName = "Block"
-        default = false
-        label = "Block"
-      },
-      {
-        fullName = "Percent Of Total"
-        default = false
-        label = "Percent Of Total"
-      },
-      {
-        fullName = "Custom"
-        default = false
-        label = "Custom"
-      },
-    ]
+    valueSet = {
+      values = {
+        List = {
+          fullName = "List"
+          default = true
+          label = "List"
+        }
+        Cost = {
+          fullName = "Cost"
+          default = false
+          label = "Cost"
+        }
+        Block = {
+          fullName = "Block"
+          default = false
+          label = "Block"
+        }
+        Percent_Of_Total@s = {
+          fullName = "Percent Of Total"
+          default = false
+          label = "Percent Of Total"
+        }
+        Custom = {
+          fullName = "Custom"
+          default = false
+          label = "Custom"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Subscription__c.field.SBQQ__PricingMethod__c.valueSet.values.List,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__PricingMethod__c.valueSet.values.Cost,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__PricingMethod__c.valueSet.values.Block,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__PricingMethod__c.valueSet.values.Percent_Of_Total@s,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__PricingMethod__c.valueSet.values.Custom,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1152,18 +1182,24 @@ type salesforce.SBQQ__Subscription__c {
     inlineHelpText = "Method of calculating the subscription price."
     label = "Subscription Pricing"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Fixed Price"
-        default = false
-        label = "Fixed Price"
-      },
-      {
-        fullName = "Percent Of Total"
-        default = false
-        label = "Percent Of Total"
-      },
-    ]
+    valueSet = {
+      values = {
+        Fixed_Price@s = {
+          fullName = "Fixed Price"
+          default = false
+          label = "Fixed Price"
+        }
+        Percent_Of_Total@s = {
+          fullName = "Percent Of Total"
+          default = false
+          label = "Percent Of Total"
+        }
+      }
+      order = [
+        salesforce.SBQQ__Subscription__c.field.SBQQ__SubscriptionPricing__c.valueSet.values.Fixed_Price@s,
+        salesforce.SBQQ__Subscription__c.field.SBQQ__SubscriptionPricing__c.valueSet.values.Percent_Of_Total@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1194,23 +1230,23 @@ type salesforce.SBQQ__Subscription__c {
       controllingField = "SBQQ__ProductSubscriptionType__c"
       valueSettings = [
         {
-          valueName = "Renewable"
+          valueName = salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Renewable.fullName
           controllingFieldValue = [
-            "Renewable",
-            "Renewable/Evergreen",
+            salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Renewable.fullName,
+            salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Renewable_Evergreen@d.fullName,
           ]
         },
         {
-          valueName = "One-time"
+          valueName = salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.One_time@b.fullName
           controllingFieldValue = [
-            "One-time",
+            salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.One_time@b.fullName,
           ]
         },
         {
-          valueName = "Evergreen"
+          valueName = salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Evergreen.fullName
           controllingFieldValue = [
-            "Renewable/Evergreen",
-            "Evergreen",
+            salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Renewable_Evergreen@d.fullName,
+            salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Evergreen.fullName,
           ]
         },
       ]

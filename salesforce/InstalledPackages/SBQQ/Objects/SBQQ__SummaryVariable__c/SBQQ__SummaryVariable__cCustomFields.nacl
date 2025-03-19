@@ -6,38 +6,48 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "Quote Line field that's acted upon by the aggregate function."
     label = "Aggregate Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = salesforce.SBQQ__QuoteLine__c.field.SBQQ__Quantity__c
-        default = false
-        label = "Quantity"
-      },
-      {
-        fullName = "tamir"
-        default = false
-        label = "tamir"
-      },
-      {
-        fullName = "famous"
-        default = false
-        label = "famous"
-      },
-      {
-        fullName = salesforce.SBQQ__QuoteLine__c.field.SBQQ__Quote__c
-        default = false
-        label = "SBQQ__Quote__c"
-      },
-      {
-        fullName = "rotem"
-        default = false
-        label = "rotem"
-      },
-      {
-        fullName = salesforce.SBQQ__QuoteLine__c.field.SBQQ__Renewal__c
-        default = false
-        label = "SBQQ__Renewal__c"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quantity = {
+          fullName = "Quantity"
+          default = false
+          label = "Quantity"
+        }
+        tamir = {
+          fullName = "tamir"
+          default = false
+          label = "tamir"
+        }
+        famous = {
+          fullName = "famous"
+          default = false
+          label = "famous"
+        }
+        SBQQ__Quote__c = {
+          fullName = "SBQQ__Quote__c"
+          default = false
+          label = "SBQQ__Quote__c"
+        }
+        rotem = {
+          fullName = "rotem"
+          default = false
+          label = "rotem"
+        }
+        SBQQ__Renewal__c = {
+          fullName = "SBQQ__Renewal__c"
+          default = false
+          label = "SBQQ__Renewal__c"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateField__c.valueSet.values.Quantity,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateField__c.valueSet.values.tamir,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateField__c.valueSet.values.famous,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateField__c.valueSet.values.SBQQ__Quote__c,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateField__c.valueSet.values.rotem,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateField__c.valueSet.values.SBQQ__Renewal__c,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -51,33 +61,42 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "Aggregate function used to calculate this variable."
     label = "Aggregate Function"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Count"
-        default = false
-        label = "Count"
-      },
-      {
-        fullName = "Sum"
-        default = false
-        label = "Sum"
-      },
-      {
-        fullName = "Average"
-        default = false
-        label = "Average"
-      },
-      {
-        fullName = "Min"
-        default = false
-        label = "Min"
-      },
-      {
-        fullName = "Max"
-        default = false
-        label = "Max"
-      },
-    ]
+    valueSet = {
+      values = {
+        Count = {
+          fullName = "Count"
+          default = false
+          label = "Count"
+        }
+        Sum = {
+          fullName = "Sum"
+          default = false
+          label = "Sum"
+        }
+        Average = {
+          fullName = "Average"
+          default = false
+          label = "Average"
+        }
+        Min = {
+          fullName = "Min"
+          default = false
+          label = "Min"
+        }
+        Max = {
+          fullName = "Max"
+          default = false
+          label = "Max"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateFunction__c.valueSet.values.Count,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateFunction__c.valueSet.values.Sum,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateFunction__c.valueSet.values.Average,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateFunction__c.valueSet.values.Min,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__AggregateFunction__c.valueSet.values.Max,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -108,28 +127,36 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "Specify how this variable should be composed with Variable Element or Value Element."
     label = "Composite Operator"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Add"
-        default = false
-        label = "Add"
-      },
-      {
-        fullName = "Subtract"
-        default = false
-        label = "Subtract"
-      },
-      {
-        fullName = "Multiply"
-        default = false
-        label = "Multiply"
-      },
-      {
-        fullName = "Divide"
-        default = false
-        label = "Divide"
-      },
-    ]
+    valueSet = {
+      values = {
+        Add = {
+          fullName = "Add"
+          default = false
+          label = "Add"
+        }
+        Subtract = {
+          fullName = "Subtract"
+          default = false
+          label = "Subtract"
+        }
+        Multiply = {
+          fullName = "Multiply"
+          default = false
+          label = "Multiply"
+        }
+        Divide = {
+          fullName = "Divide"
+          default = false
+          label = "Divide"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__CompositeOperator__c.valueSet.values.Add,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__CompositeOperator__c.valueSet.values.Subtract,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__CompositeOperator__c.valueSet.values.Multiply,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__CompositeOperator__c.valueSet.values.Divide,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -143,18 +170,24 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "If you want to limit records further based on a quote field, select the field that you want to match against the same field on the quote."
     label = "Constraint Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Type"
-        default = false
-        label = "Type"
-      },
-      {
-        fullName = "Status"
-        default = false
-        label = "Status"
-      },
-    ]
+    valueSet = {
+      values = {
+        Type = {
+          fullName = "Type"
+          default = false
+          label = "Type"
+        }
+        Status = {
+          fullName = "Status"
+          default = false
+          label = "Status"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__ConstraintField__c.valueSet.values.Type,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__ConstraintField__c.valueSet.values.Status,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -168,18 +201,24 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "Select the field to use when filtering items for inclusion in this summary variable."
     label = "Filter Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product Code"
-        default = false
-        label = "Product Code"
-      },
-      {
-        fullName = "Product Family"
-        default = false
-        label = "Product Family"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product_Code@s = {
+          fullName = "Product Code"
+          default = false
+          label = "Product Code"
+        }
+        Product_Family@s = {
+          fullName = "Product Family"
+          default = false
+          label = "Product Family"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__FilterField__c.valueSet.values.Product_Code@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__FilterField__c.valueSet.values.Product_Family@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -208,53 +247,66 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "Choose the operator to use in your filter."
     label = "Operator"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "equals"
-        default = false
-        label = "equals"
-      },
-      {
-        fullName = "not equals"
-        default = false
-        label = "not equals"
-      },
-      {
-        fullName = "less than"
-        default = false
-        label = "less than"
-      },
-      {
-        fullName = "less or equals"
-        default = false
-        label = "less or equals"
-      },
-      {
-        fullName = "greater than"
-        default = false
-        label = "greater than"
-      },
-      {
-        fullName = "greater or equals"
-        default = false
-        label = "greater or equals"
-      },
-      {
-        fullName = "starts with"
-        default = false
-        label = "starts with"
-      },
-      {
-        fullName = "ends with"
-        default = false
-        label = "ends with"
-      },
-      {
-        fullName = "contains"
-        default = false
-        label = "contains"
-      },
-    ]
+    valueSet = {
+      values = {
+        equals = {
+          fullName = "equals"
+          default = false
+          label = "equals"
+        }
+        not_equals@s = {
+          fullName = "not equals"
+          default = false
+          label = "not equals"
+        }
+        less_than@s = {
+          fullName = "less than"
+          default = false
+          label = "less than"
+        }
+        less_or_equals@s = {
+          fullName = "less or equals"
+          default = false
+          label = "less or equals"
+        }
+        greater_than@s = {
+          fullName = "greater than"
+          default = false
+          label = "greater than"
+        }
+        greater_or_equals@s = {
+          fullName = "greater or equals"
+          default = false
+          label = "greater or equals"
+        }
+        starts_with@s = {
+          fullName = "starts with"
+          default = false
+          label = "starts with"
+        }
+        ends_with@s = {
+          fullName = "ends with"
+          default = false
+          label = "ends with"
+        }
+        contains = {
+          fullName = "contains"
+          default = false
+          label = "contains"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.equals,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.less_than@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.less_or_equals@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.greater_than@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.greater_or_equals@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.starts_with@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.ends_with@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Operator__c.valueSet.values.contains,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -268,18 +320,24 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "Enter the scope of your summary variable."
     label = "Scope"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = true
-        label = "Quote"
-      },
-      {
-        fullName = "Assets"
-        default = false
-        label = "Assets"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = true
+          label = "Quote"
+        }
+        Assets = {
+          fullName = "Assets"
+          default = false
+          label = "Assets"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Scope__c.valueSet.values.Quote,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__Scope__c.valueSet.values.Assets,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -293,28 +351,36 @@ type salesforce.SBQQ__SummaryVariable__c {
     inlineHelpText = "Select the object you want to aggregate."
     label = "Target Object"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote Line"
-        default = false
-        label = "Quote Line"
-      },
-      {
-        fullName = "Product Option"
-        default = false
-        label = "Product Option"
-      },
-      {
-        fullName = "Asset"
-        default = false
-        label = "Asset"
-      },
-      {
-        fullName = "Subscription"
-        default = false
-        label = "Subscription"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote_Line@s = {
+          fullName = "Quote Line"
+          default = false
+          label = "Quote Line"
+        }
+        Product_Option@s = {
+          fullName = "Product Option"
+          default = false
+          label = "Product Option"
+        }
+        Asset = {
+          fullName = "Asset"
+          default = false
+          label = "Asset"
+        }
+        Subscription = {
+          fullName = "Subscription"
+          default = false
+          label = "Subscription"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__TargetObject__c.valueSet.values.Asset,
+        salesforce.SBQQ__SummaryVariable__c.field.SBQQ__TargetObject__c.valueSet.values.Subscription,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

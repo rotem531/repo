@@ -6,13 +6,18 @@ type salesforce.SBQQ__LookupQuery__c {
     inlineHelpText = "API Name of the custom field used in the query."
     label = "Lookup Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "SBQQ__Category__c"
-        default = false
-        label = "SBQQ__Category__c"
-      },
-    ]
+    valueSet = {
+      values = {
+        SBQQ__Category__c = {
+          fullName = "SBQQ__Category__c"
+          default = false
+          label = "SBQQ__Category__c"
+        }
+      }
+      order = [
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__LookupField__c.valueSet.values.SBQQ__Category__c,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -26,23 +31,30 @@ type salesforce.SBQQ__LookupQuery__c {
     inlineHelpText = "If Match Type = Field Value, select a Tested Object and Tested Field. If Match Type = Static Value, enter the value into Tested Value. If Match Type = Configuration Attribute, specify a Configuration Attribute."
     label = "Match Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Field Value"
-        default = false
-        label = "Field Value"
-      },
-      {
-        fullName = "Static Value"
-        default = false
-        label = "Static Value"
-      },
-      {
-        fullName = "Configuration Attribute Value"
-        default = false
-        label = "Configuration Attribute Value"
-      },
-    ]
+    valueSet = {
+      values = {
+        Field_Value@s = {
+          fullName = "Field Value"
+          default = false
+          label = "Field Value"
+        }
+        Static_Value@s = {
+          fullName = "Static Value"
+          default = false
+          label = "Static Value"
+        }
+        Configuration_Attribute_Value@s = {
+          fullName = "Configuration Attribute Value"
+          default = false
+          label = "Configuration Attribute Value"
+        }
+      }
+      order = [
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__MatchType__c.valueSet.values.Field_Value@s,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__MatchType__c.valueSet.values.Static_Value@s,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__MatchType__c.valueSet.values.Configuration_Attribute_Value@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -56,38 +68,48 @@ type salesforce.SBQQ__LookupQuery__c {
     inlineHelpText = "The operator that is applied when comparing the Field with the Value."
     label = "Operator"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "equals"
-        default = false
-        label = "equals"
-      },
-      {
-        fullName = "not equals"
-        default = false
-        label = "not equals"
-      },
-      {
-        fullName = "less than"
-        default = false
-        label = "less than"
-      },
-      {
-        fullName = "less or equals"
-        default = false
-        label = "less or equals"
-      },
-      {
-        fullName = "greater than"
-        default = false
-        label = "greater than"
-      },
-      {
-        fullName = "greater or equals"
-        default = false
-        label = "greater or equals"
-      },
-    ]
+    valueSet = {
+      values = {
+        equals = {
+          fullName = "equals"
+          default = false
+          label = "equals"
+        }
+        not_equals@s = {
+          fullName = "not equals"
+          default = false
+          label = "not equals"
+        }
+        less_than@s = {
+          fullName = "less than"
+          default = false
+          label = "less than"
+        }
+        less_or_equals@s = {
+          fullName = "less or equals"
+          default = false
+          label = "less or equals"
+        }
+        greater_than@s = {
+          fullName = "greater than"
+          default = false
+          label = "greater than"
+        }
+        greater_or_equals@s = {
+          fullName = "greater or equals"
+          default = false
+          label = "greater or equals"
+        }
+      }
+      order = [
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__Operator__c.valueSet.values.equals,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__Operator__c.valueSet.values.less_than@s,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__Operator__c.valueSet.values.less_or_equals@s,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__Operator__c.valueSet.values.greater_than@s,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__Operator__c.valueSet.values.greater_or_equals@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -232,13 +254,18 @@ type salesforce.SBQQ__LookupQuery__c {
     inlineHelpText = "Field on Quote, Quote Line or Product Option object that is evaluated by this query. Required if Match Type = Field Value."
     label = "Tested Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product Code"
-        default = false
-        label = "Product Code"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product_Code@s = {
+          fullName = "Product Code"
+          default = false
+          label = "Product Code"
+        }
+      }
+      order = [
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__TestedField__c.valueSet.values.Product_Code@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -252,23 +279,30 @@ type salesforce.SBQQ__LookupQuery__c {
     inlineHelpText = "Object against which the query is evaluated. Required if Match Type = Field Value."
     label = "Tested Object"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = salesforce.SBQQ__Quote__c
-        default = false
-        label = "Quote"
-      },
-      {
-        fullName = salesforce.SBQQ__QuoteLine__c
-        default = false
-        label = "Quote Line"
-      },
-      {
-        fullName = salesforce.SBQQ__ProductOption__c
-        default = false
-        label = "Product Option"
-      },
-    ]
+    valueSet = {
+      values = {
+        SBQQ__Quote__c = {
+          fullName = salesforce.SBQQ__Quote__c
+          default = false
+          label = "Quote"
+        }
+        SBQQ__QuoteLine__c = {
+          fullName = salesforce.SBQQ__QuoteLine__c
+          default = false
+          label = "Quote Line"
+        }
+        SBQQ__ProductOption__c = {
+          fullName = salesforce.SBQQ__ProductOption__c
+          default = false
+          label = "Product Option"
+        }
+      }
+      order = [
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__TestedObject__c.valueSet.values.SBQQ__Quote__c,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__TestedObject__c.valueSet.values.SBQQ__QuoteLine__c,
+        salesforce.SBQQ__LookupQuery__c.field.SBQQ__TestedObject__c.valueSet.values.SBQQ__ProductOption__c,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

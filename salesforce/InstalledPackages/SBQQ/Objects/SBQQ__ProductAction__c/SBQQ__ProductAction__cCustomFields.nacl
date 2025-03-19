@@ -6,18 +6,24 @@ type salesforce.SBQQ__ProductAction__c {
     inlineHelpText = "Choose the field to update when the rule is triggered."
     label = "Filter Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product Code"
-        default = false
-        label = "Product Code"
-      },
-      {
-        fullName = "Product Family"
-        default = false
-        label = "Product Family"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product_Code@s = {
+          fullName = "Product Code"
+          default = false
+          label = "Product Code"
+        }
+        Product_Family@s = {
+          fullName = "Product Family"
+          default = false
+          label = "Product Family"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__FilterField__c.valueSet.values.Product_Code@s,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__FilterField__c.valueSet.values.Product_Family@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -46,28 +52,36 @@ type salesforce.SBQQ__ProductAction__c {
     inlineHelpText = "Choose the operator that determines how the Filter Field will apply to the Filter Value."
     label = "Operator"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "equals"
-        default = false
-        label = "equals"
-      },
-      {
-        fullName = "not equals"
-        default = false
-        label = "not equals"
-      },
-      {
-        fullName = "starts with"
-        default = false
-        label = "starts with"
-      },
-      {
-        fullName = "contains"
-        default = false
-        label = "contains"
-      },
-    ]
+    valueSet = {
+      values = {
+        equals = {
+          fullName = "equals"
+          default = false
+          label = "equals"
+        }
+        not_equals@s = {
+          fullName = "not equals"
+          default = false
+          label = "not equals"
+        }
+        starts_with@s = {
+          fullName = "starts with"
+          default = false
+          label = "starts with"
+        }
+        contains = {
+          fullName = "contains"
+          default = false
+          label = "contains"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Operator__c.valueSet.values.equals,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Operator__c.valueSet.values.starts_with@s,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Operator__c.valueSet.values.contains,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -146,68 +160,84 @@ type salesforce.SBQQ__ProductAction__c {
     inlineHelpText = "Specify the type of action."
     label = "Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Add"
-        default = false
-        label = "Add"
-      },
-      {
-        fullName = "Remove"
-        default = false
-        label = "Remove"
-      },
-      {
-        fullName = "Enable"
-        default = false
-        label = "Enable"
-      },
-      {
-        fullName = "Disable"
-        default = false
-        label = "Disable"
-      },
-      {
-        fullName = "Enable & Add"
-        default = false
-        label = "Enable & Add"
-      },
-      {
-        fullName = "Disable & Remove"
-        default = false
-        label = "Disable & Remove"
-      },
-      {
-        fullName = "Show"
-        default = false
-        label = "Show"
-      },
-      {
-        fullName = "Hide"
-        default = false
-        label = "Hide"
-      },
-      {
-        fullName = "Show & Add"
-        default = false
-        label = "Show & Add"
-      },
-      {
-        fullName = "Hide & Remove"
-        default = false
-        label = "Hide & Remove"
-      },
-      {
-        fullName = "Default Filter"
-        default = false
-        label = "Default Filter"
-      },
-      {
-        fullName = "Optional Filter"
-        default = false
-        label = "Optional Filter"
-      },
-    ]
+    valueSet = {
+      values = {
+        Add = {
+          fullName = "Add"
+          default = false
+          label = "Add"
+        }
+        Remove = {
+          fullName = "Remove"
+          default = false
+          label = "Remove"
+        }
+        Enable = {
+          fullName = "Enable"
+          default = false
+          label = "Enable"
+        }
+        Disable = {
+          fullName = "Disable"
+          default = false
+          label = "Disable"
+        }
+        Enable___Add@ses = {
+          fullName = "Enable & Add"
+          default = false
+          label = "Enable & Add"
+        }
+        Disable___Remove@ses = {
+          fullName = "Disable & Remove"
+          default = false
+          label = "Disable & Remove"
+        }
+        Show = {
+          fullName = "Show"
+          default = false
+          label = "Show"
+        }
+        Hide = {
+          fullName = "Hide"
+          default = false
+          label = "Hide"
+        }
+        Show___Add@ses = {
+          fullName = "Show & Add"
+          default = false
+          label = "Show & Add"
+        }
+        Hide___Remove@ses = {
+          fullName = "Hide & Remove"
+          default = false
+          label = "Hide & Remove"
+        }
+        Default_Filter@s = {
+          fullName = "Default Filter"
+          default = false
+          label = "Default Filter"
+        }
+        Optional_Filter@s = {
+          fullName = "Optional Filter"
+          default = false
+          label = "Optional Filter"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Add,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Remove,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Enable,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Disable,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Enable___Add@ses,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Disable___Remove@ses,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Show,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Hide,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Show___Add@ses,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Hide___Remove@ses,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Default_Filter@s,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__Type__c.valueSet.values.Optional_Filter@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -249,13 +279,18 @@ type salesforce.SBQQ__ProductAction__c {
     inlineHelpText = "Compares the Filter Field with this field instead of the Filter Value."
     label = "Value Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product Code"
-        default = false
-        label = "Product Code"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product_Code@s = {
+          fullName = "Product Code"
+          default = false
+          label = "Product Code"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__ValueField__c.valueSet.values.Product_Code@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -269,23 +304,30 @@ type salesforce.SBQQ__ProductAction__c {
     inlineHelpText = "Select the Salesforce Object where the Value Field is defined."
     label = "Value Object"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = false
-        label = "Quote"
-      },
-      {
-        fullName = "Product"
-        default = false
-        label = "Product"
-      },
-      {
-        fullName = "Configuration Attributes"
-        default = false
-        label = "Configuration Attributes"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = false
+          label = "Quote"
+        }
+        Product = {
+          fullName = "Product"
+          default = false
+          label = "Product"
+        }
+        Configuration_Attributes@s = {
+          fullName = "Configuration Attributes"
+          default = false
+          label = "Configuration Attributes"
+        }
+      }
+      order = [
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__ValueObject__c.valueSet.values.Quote,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__ValueObject__c.valueSet.values.Product,
+        salesforce.SBQQ__ProductAction__c.field.SBQQ__ValueObject__c.valueSet.values.Configuration_Attributes@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

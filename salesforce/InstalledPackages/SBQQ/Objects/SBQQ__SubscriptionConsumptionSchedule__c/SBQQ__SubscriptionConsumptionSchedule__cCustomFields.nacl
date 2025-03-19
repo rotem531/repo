@@ -6,23 +6,30 @@ type salesforce.SBQQ__SubscriptionConsumptionSchedule__c {
     label = "Billing Term Unit"
     _required = true
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Month"
-        default = false
-        label = "Month"
-      },
-      {
-        fullName = "Year"
-        default = false
-        label = "Year"
-      },
-      {
-        fullName = "Quarter"
-        default = false
-        label = "Quarter"
-      },
-    ]
+    valueSet = {
+      values = {
+        Month = {
+          fullName = "Month"
+          default = false
+          label = "Month"
+        }
+        Year = {
+          fullName = "Year"
+          default = false
+          label = "Year"
+        }
+        Quarter = {
+          fullName = "Quarter"
+          default = false
+          label = "Quarter"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__BillingTermUnit__c.valueSet.values.Month,
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__BillingTermUnit__c.valueSet.values.Year,
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__BillingTermUnit__c.valueSet.values.Quarter,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -50,13 +57,18 @@ type salesforce.SBQQ__SubscriptionConsumptionSchedule__c {
     label = "Category"
     _required = true
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Rates"
-        default = false
-        label = "Rates"
-      },
-    ]
+    valueSet = {
+      values = {
+        Rates = {
+          fullName = "Rates"
+          default = false
+          label = "Rates"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__Category__c.valueSet.values.Rates,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -110,13 +122,18 @@ type salesforce.SBQQ__SubscriptionConsumptionSchedule__c {
     label = "Rating Method"
     _required = true
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Tier"
-        default = false
-        label = "Tier"
-      },
-    ]
+    valueSet = {
+      values = {
+        Tier = {
+          fullName = "Tier"
+          default = false
+          label = "Tier"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__RatingMethod__c.valueSet.values.Tier,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -147,18 +164,24 @@ type salesforce.SBQQ__SubscriptionConsumptionSchedule__c {
     label = "Type"
     _required = true
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Range"
-        default = false
-        label = "Range"
-      },
-      {
-        fullName = "Slab"
-        default = false
-        label = "Slab"
-      },
-    ]
+    valueSet = {
+      values = {
+        Range = {
+          fullName = "Range"
+          default = false
+          label = "Range"
+        }
+        Slab = {
+          fullName = "Slab"
+          default = false
+          label = "Slab"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__Type__c.valueSet.values.Range,
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__Type__c.valueSet.values.Slab,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -171,13 +194,18 @@ type salesforce.SBQQ__SubscriptionConsumptionSchedule__c {
     inlineHelpText = "Usage quantities and rates apply to this unit of measurement."
     label = "Unit of Measure"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "None"
-        default = false
-        label = "None"
-      },
-    ]
+    valueSet = {
+      values = {
+        None = {
+          fullName = "None"
+          default = false
+          label = "None"
+        }
+      }
+      order = [
+        salesforce.SBQQ__SubscriptionConsumptionSchedule__c.field.SBQQ__UnitOfMeasure__c.valueSet.values.None,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

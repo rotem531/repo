@@ -1,17 +1,23 @@
 salesforce.GlobalValueSet SBQQ__BookingsIndicator {
   fullName = "SBQQ__BookingsIndicator"
-  customValue = [
-    {
-      fullName = "Include"
-      default = true
-      label = "Include"
-    },
-    {
-      fullName = "Do Not Include"
-      default = false
-      label = "Do Not Include"
-    },
-  ]
+  customValue = {
+    values = {
+      Include = {
+        fullName = "Include"
+        default = true
+        label = "Include"
+      }
+      Do_Not_Include@s = {
+        fullName = "Do Not Include"
+        default = false
+        label = "Do Not Include"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__BookingsIndicator.customValue.values.Include,
+      salesforce.GlobalValueSet.instance.SBQQ__BookingsIndicator.customValue.values.Do_Not_Include@s,
+    ]
+  }
   description = "Bookings Indicator."
   masterLabel = "Bookings Indicator"
   sorted = false

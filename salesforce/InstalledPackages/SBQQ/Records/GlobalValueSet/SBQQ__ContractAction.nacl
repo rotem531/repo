@@ -1,37 +1,47 @@
 salesforce.GlobalValueSet SBQQ__ContractAction {
   fullName = "SBQQ__ContractAction"
-  customValue = [
-    {
-      fullName = "New"
-      default = false
-      label = "New"
-    },
-    {
-      fullName = "Quantity Increase"
-      default = false
-      label = "Quantity Increase"
-    },
-    {
-      fullName = "Quantity Decrease"
-      default = false
-      label = "Quantity Decrease"
-    },
-    {
-      fullName = "Product Swap"
-      default = false
-      label = "Product Swap"
-    },
-    {
-      fullName = "Renew"
-      default = false
-      label = "Renew"
-    },
-    {
-      fullName = "Cancel"
-      default = false
-      label = "Cancel"
-    },
-  ]
+  customValue = {
+    values = {
+      New = {
+        fullName = "New"
+        default = false
+        label = "New"
+      }
+      Quantity_Increase@s = {
+        fullName = "Quantity Increase"
+        default = false
+        label = "Quantity Increase"
+      }
+      Quantity_Decrease@s = {
+        fullName = "Quantity Decrease"
+        default = false
+        label = "Quantity Decrease"
+      }
+      Product_Swap@s = {
+        fullName = "Product Swap"
+        default = false
+        label = "Product Swap"
+      }
+      Renew = {
+        fullName = "Renew"
+        default = false
+        label = "Renew"
+      }
+      Cancel = {
+        fullName = "Cancel"
+        default = false
+        label = "Cancel"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__ContractAction.customValue.values.New,
+      salesforce.GlobalValueSet.instance.SBQQ__ContractAction.customValue.values.Quantity_Increase@s,
+      salesforce.GlobalValueSet.instance.SBQQ__ContractAction.customValue.values.Quantity_Decrease@s,
+      salesforce.GlobalValueSet.instance.SBQQ__ContractAction.customValue.values.Product_Swap@s,
+      salesforce.GlobalValueSet.instance.SBQQ__ContractAction.customValue.values.Renew,
+      salesforce.GlobalValueSet.instance.SBQQ__ContractAction.customValue.values.Cancel,
+    ]
+  }
   description = "Contract actions"
   masterLabel = "Contract Action"
   sorted = false

@@ -1,17 +1,23 @@
 salesforce.GlobalValueSet SBQQ__BillingType {
   fullName = "SBQQ__BillingType"
-  customValue = [
-    {
-      fullName = "Advance"
-      default = false
-      label = "Advance"
-    },
-    {
-      fullName = "Arrears"
-      default = false
-      label = "Arrears"
-    },
-  ]
+  customValue = {
+    values = {
+      Advance = {
+        fullName = "Advance"
+        default = false
+        label = "Advance"
+      }
+      Arrears = {
+        fullName = "Arrears"
+        default = false
+        label = "Arrears"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__BillingType.customValue.values.Advance,
+      salesforce.GlobalValueSet.instance.SBQQ__BillingType.customValue.values.Arrears,
+    ]
+  }
   description = "Billing type"
   masterLabel = "Billing Type"
   sorted = false

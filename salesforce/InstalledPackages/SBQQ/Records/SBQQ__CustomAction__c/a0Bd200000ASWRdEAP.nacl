@@ -1,18 +1,18 @@
 salesforce.SBQQ__CustomAction__c a0Bd200000ASWRdEAP {
-  SBQQ__Action__c = "View Consumption Schedule"
+  SBQQ__Action__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Action__c.valueSet.values.View_Consumption_Schedule@s.fullName
   SBQQ__Active__c = true
   SBQQ__BrandButton__c = false
   SBQQ__Class__c = "viewConsumptionScheduleBtn"
-  SBQQ__ConditionsMet__c = "All"
+  SBQQ__ConditionsMet__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__ConditionsMet__c.valueSet.values.All.fullName
   SBQQ__Default__c = false
   SBQQ__DisplayOrder__c = 998
   SBQQ__EventHandlerName__c = "onViewConsumptionSchedule"
   SBQQ__IconClass__c = "sf-icon-paired-lines"
-  SBQQ__Icon__c = "paired-lines"
-  SBQQ__Label__c = "View Consumption Schedule"
-  SBQQ__Location__c = "Line"
-  SBQQ__Page__c = "Quote Line Editor"
-  SBQQ__Type__c = "Button"
+  SBQQ__Icon__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Icon__c.valueSet.values.paired_lines@b.fullName
+  SBQQ__Label__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Label__c.valueSet.values.View_Consumption_Schedule@s.fullName
+  SBQQ__Location__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Location__c.valueSet.values.Line.fullName
+  SBQQ__Page__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Page__c.valueSet.values.Quote_Line_Editor@s.fullName
+  SBQQ__Type__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Type__c.valueSet.values.Button.fullName
   Name = "View Consumption Schedule"
   _alias = "View Consumption Schedule"
 }

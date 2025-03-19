@@ -1,17 +1,23 @@
 salesforce.GlobalValueSet SBQQ__SubscriptionPricing {
   fullName = "SBQQ__SubscriptionPricing"
-  customValue = [
-    {
-      fullName = "Fixed Price"
-      default = false
-      label = "Fixed Price"
-    },
-    {
-      fullName = "Percent Of Total"
-      default = false
-      label = "Percent Of Total"
-    },
-  ]
+  customValue = {
+    values = {
+      Fixed_Price@s = {
+        fullName = "Fixed Price"
+        default = false
+        label = "Fixed Price"
+      }
+      Percent_Of_Total@s = {
+        fullName = "Percent Of Total"
+        default = false
+        label = "Percent Of Total"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__SubscriptionPricing.customValue.values.Fixed_Price@s,
+      salesforce.GlobalValueSet.instance.SBQQ__SubscriptionPricing.customValue.values.Percent_Of_Total@s,
+    ]
+  }
   description = "Subscription pricing options"
   masterLabel = "Subscription Pricing"
   sorted = false

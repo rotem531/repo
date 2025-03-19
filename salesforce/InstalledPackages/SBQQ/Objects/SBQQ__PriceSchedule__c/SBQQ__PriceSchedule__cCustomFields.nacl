@@ -23,18 +23,24 @@ type salesforce.SBQQ__PriceSchedule__c {
     inlineHelpText = "Specify how to aggregate quantities of quote lines for products using this schedule. By default quantity of each line (even for the same product) is considered independently."
     label = "Aggregation Scope"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = false
-        label = "Quote"
-      },
-      {
-        fullName = "Group"
-        default = false
-        label = "Group"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = false
+          label = "Quote"
+        }
+        Group = {
+          fullName = "Group"
+          default = false
+          label = "Group"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__AggregationScope__c.valueSet.values.Quote,
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__AggregationScope__c.valueSet.values.Group,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -48,13 +54,18 @@ type salesforce.SBQQ__PriceSchedule__c {
     inlineHelpText = "Select the field that you want to match against the same field on the quote."
     label = "Constraint Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = salesforce.SBQQ__Quote__c.field.SBQQ__Account__c
-        default = false
-        label = "Account__c"
-      },
-    ]
+    valueSet = {
+      values = {
+        SBQQ__Quote__c_SBQQ__Account__c@uuuuvuuuu = {
+          fullName = salesforce.SBQQ__Quote__c.field.SBQQ__Account__c
+          default = false
+          label = "Account__c"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__ConstraintField__c.valueSet.values.SBQQ__Quote__c_SBQQ__Account__c@uuuuvuuuu,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -105,23 +116,30 @@ type salesforce.SBQQ__PriceSchedule__c {
     inlineHelpText = "Specify the Discount Unit: Amount or Percent."
     label = "Discount Unit"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Percent"
-        default = true
-        label = "Percent"
-      },
-      {
-        fullName = "Amount"
-        default = false
-        label = "Amount"
-      },
-      {
-        fullName = "Price"
-        default = false
-        label = "Price"
-      },
-    ]
+    valueSet = {
+      values = {
+        Percent = {
+          fullName = "Percent"
+          default = true
+          label = "Percent"
+        }
+        Amount = {
+          fullName = "Amount"
+          default = false
+          label = "Amount"
+        }
+        Price = {
+          fullName = "Price"
+          default = false
+          label = "Price"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__DiscountUnit__c.valueSet.values.Percent,
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__DiscountUnit__c.valueSet.values.Amount,
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__DiscountUnit__c.valueSet.values.Price,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -221,18 +239,24 @@ type salesforce.SBQQ__PriceSchedule__c {
     inlineHelpText = "Determines if the current Discount Tier that the product falls within is editable, if all Discount Tiers are editable, or none."
     label = "Override Behavior"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "All"
-        default = false
-        label = "All"
-      },
-      {
-        fullName = "Current Tier Only"
-        default = false
-        label = "Current Tier Only"
-      },
-    ]
+    valueSet = {
+      values = {
+        All = {
+          fullName = "All"
+          default = false
+          label = "All"
+        }
+        Current_Tier_Only@s = {
+          fullName = "Current Tier Only"
+          default = false
+          label = "Current Tier Only"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__OverrideBehavior__c.valueSet.values.All,
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__OverrideBehavior__c.valueSet.values.Current_Tier_Only@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -309,13 +333,18 @@ type salesforce.SBQQ__PriceSchedule__c {
     inlineHelpText = "Field used to calculate Price Schedule pricing."
     label = "Quote Line Quantity Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quantity"
-        default = true
-        label = "Quantity"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quantity = {
+          fullName = "Quantity"
+          default = true
+          label = "Quantity"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceSchedule__c.field.SBQQ__QuoteLineQuantityField__c.valueSet.values.Quantity,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

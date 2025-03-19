@@ -55,18 +55,24 @@ type salesforce.SBQQ__QuoteLineConsumptionRate__c {
     label = "Pricing Method"
     _required = true
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "PerUnit"
-        default = false
-        label = "Per Unit"
-      },
-      {
-        fullName = "FlatFee"
-        default = false
-        label = "Flat Fee"
-      },
-    ]
+    valueSet = {
+      values = {
+        PerUnit = {
+          fullName = "PerUnit"
+          default = false
+          label = "Per Unit"
+        }
+        FlatFee = {
+          fullName = "FlatFee"
+          default = false
+          label = "Flat Fee"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteLineConsumptionRate__c.field.SBQQ__PricingMethod__c.valueSet.values.PerUnit,
+        salesforce.SBQQ__QuoteLineConsumptionRate__c.field.SBQQ__PricingMethod__c.valueSet.values.FlatFee,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

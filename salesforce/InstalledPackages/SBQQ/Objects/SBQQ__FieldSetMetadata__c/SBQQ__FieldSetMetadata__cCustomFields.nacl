@@ -46,13 +46,18 @@ type salesforce.SBQQ__FieldSetMetadata__c {
     label = "Object Type"
     _required = true
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote Line"
-        default = true
-        label = "Quote Line"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote_Line@s = {
+          fullName = "Quote Line"
+          default = true
+          label = "Quote Line"
+        }
+      }
+      order = [
+        salesforce.SBQQ__FieldSetMetadata__c.field.SBQQ__ObjectType__c.valueSet.values.Quote_Line@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

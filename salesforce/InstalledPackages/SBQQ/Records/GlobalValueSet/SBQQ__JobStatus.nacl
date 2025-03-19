@@ -1,37 +1,47 @@
 salesforce.GlobalValueSet SBQQ__JobStatus {
   fullName = "SBQQ__JobStatus"
-  customValue = [
-    {
-      fullName = "Not Started"
-      default = true
-      label = "Not Started"
-    },
-    {
-      fullName = "Not Needed"
-      default = false
-      label = "Not Needed"
-    },
-    {
-      fullName = "Queued"
-      default = false
-      label = "Queued"
-    },
-    {
-      fullName = "Aborted"
-      default = false
-      label = "Aborted"
-    },
-    {
-      fullName = "Failed"
-      default = false
-      label = "Failed"
-    },
-    {
-      fullName = "Completed"
-      default = false
-      label = "Completed"
-    },
-  ]
+  customValue = {
+    values = {
+      Not_Started@s = {
+        fullName = "Not Started"
+        default = true
+        label = "Not Started"
+      }
+      Not_Needed@s = {
+        fullName = "Not Needed"
+        default = false
+        label = "Not Needed"
+      }
+      Queued = {
+        fullName = "Queued"
+        default = false
+        label = "Queued"
+      }
+      Aborted = {
+        fullName = "Aborted"
+        default = false
+        label = "Aborted"
+      }
+      Failed = {
+        fullName = "Failed"
+        default = false
+        label = "Failed"
+      }
+      Completed = {
+        fullName = "Completed"
+        default = false
+        label = "Completed"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__JobStatus.customValue.values.Not_Started@s,
+      salesforce.GlobalValueSet.instance.SBQQ__JobStatus.customValue.values.Not_Needed@s,
+      salesforce.GlobalValueSet.instance.SBQQ__JobStatus.customValue.values.Queued,
+      salesforce.GlobalValueSet.instance.SBQQ__JobStatus.customValue.values.Aborted,
+      salesforce.GlobalValueSet.instance.SBQQ__JobStatus.customValue.values.Failed,
+      salesforce.GlobalValueSet.instance.SBQQ__JobStatus.customValue.values.Completed,
+    ]
+  }
   masterLabel = "Job Status"
   sorted = false
   _alias = "SBQQ__JobStatus"

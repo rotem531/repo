@@ -170,28 +170,36 @@ type salesforce.SBQQ__WebQuoteLine__c {
     inlineHelpText = "Subscription scope set at the component level. This field overrides the subscription scope copied from the product."
     label = "Component Subscription Scope"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Package"
-        default = false
-        label = "Package"
-      },
-      {
-        fullName = "Components"
-        default = false
-        label = "Components"
-      },
-      {
-        fullName = "Both"
-        default = false
-        label = "Package & Components"
-      },
-      {
-        fullName = "Entire Hierarchy"
-        default = false
-        label = "Entire Hierarchy"
-      },
-    ]
+    valueSet = {
+      values = {
+        Package = {
+          fullName = "Package"
+          default = false
+          label = "Package"
+        }
+        Components = {
+          fullName = "Components"
+          default = false
+          label = "Components"
+        }
+        Both = {
+          fullName = "Both"
+          default = false
+          label = "Package & Components"
+        }
+        Entire_Hierarchy@s = {
+          fullName = "Entire Hierarchy"
+          default = false
+          label = "Entire Hierarchy"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Package,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Components,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Both,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__ComponentSubscriptionScope__c.valueSet.values.Entire_Hierarchy@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -406,18 +414,24 @@ type salesforce.SBQQ__WebQuoteLine__c {
     inlineHelpText = "Discount schedule type. Copied from Type field in associated discount schedule."
     label = "Discount Schedule Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Range"
-        default = false
-        label = "Range"
-      },
-      {
-        fullName = "Slab"
-        default = false
-        label = "Slab"
-      },
-    ]
+    valueSet = {
+      values = {
+        Range = {
+          fullName = "Range"
+          default = false
+          label = "Range"
+        }
+        Slab = {
+          fullName = "Slab"
+          default = false
+          label = "Slab"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__DiscountScheduleType__c.valueSet.values.Range,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__DiscountScheduleType__c.valueSet.values.Slab,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -909,18 +923,24 @@ IF(OR(SBQQ__Renewal__c, SBQQ__Bundled__c), 0,
     inlineHelpText = "Option type copied from related Product Option. Determines how quantity is calculated."
     label = "Option Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Component"
-        default = false
-        label = "Component"
-      },
-      {
-        fullName = "Accessory"
-        default = false
-        label = "Accessory"
-      },
-    ]
+    valueSet = {
+      values = {
+        Component = {
+          fullName = "Component"
+          default = false
+          label = "Component"
+        }
+        Accessory = {
+          fullName = "Accessory"
+          default = false
+          label = "Accessory"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__OptionType__c.valueSet.values.Component,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__OptionType__c.valueSet.values.Accessory,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1112,28 +1132,36 @@ IF(OR(SBQQ__Renewal__c, SBQQ__Bundled__c), 0,
     inlineHelpText = "Indicates how the price for this line item is calculated: List, by subtracting discount from list price or Cost, by adding markup to cost."
     label = "Pricing Method"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "List"
-        default = true
-        label = "List"
-      },
-      {
-        fullName = "Cost"
-        default = false
-        label = "Cost"
-      },
-      {
-        fullName = "Block"
-        default = false
-        label = "Block"
-      },
-      {
-        fullName = "Custom"
-        default = false
-        label = "Custom"
-      },
-    ]
+    valueSet = {
+      values = {
+        List = {
+          fullName = "List"
+          default = true
+          label = "List"
+        }
+        Cost = {
+          fullName = "Cost"
+          default = false
+          label = "Cost"
+        }
+        Block = {
+          fullName = "Block"
+          default = false
+          label = "Block"
+        }
+        Custom = {
+          fullName = "Custom"
+          default = false
+          label = "Custom"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__PricingMethod__c.valueSet.values.List,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__PricingMethod__c.valueSet.values.Cost,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__PricingMethod__c.valueSet.values.Block,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__PricingMethod__c.valueSet.values.Custom,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1512,28 +1540,36 @@ IF(OR(SBQQ__Renewal__c, SBQQ__Bundled__c), 0,
     inlineHelpText = "Type of special pricing extended."
     label = "Special Price Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Contracted Price"
-        default = false
-        label = "Contracted Price"
-      },
-      {
-        fullName = "Renewal"
-        default = false
-        label = "Renewal"
-      },
-      {
-        fullName = "Volume Discount"
-        default = false
-        label = "Volume Discount"
-      },
-      {
-        fullName = "Custom"
-        default = false
-        label = "Custom"
-      },
-    ]
+    valueSet = {
+      values = {
+        Contracted_Price@s = {
+          fullName = "Contracted Price"
+          default = false
+          label = "Contracted Price"
+        }
+        Renewal = {
+          fullName = "Renewal"
+          default = false
+          label = "Renewal"
+        }
+        Volume_Discount@s = {
+          fullName = "Volume Discount"
+          default = false
+          label = "Volume Discount"
+        }
+        Custom = {
+          fullName = "Custom"
+          default = false
+          label = "Custom"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SpecialPriceType__c.valueSet.values.Contracted_Price@s,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SpecialPriceType__c.valueSet.values.Renewal,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SpecialPriceType__c.valueSet.values.Volume_Discount@s,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SpecialPriceType__c.valueSet.values.Custom,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1599,18 +1635,24 @@ IF(OR(SBQQ__Renewal__c, SBQQ__Bundled__c), 0,
     inlineHelpText = "Category defined on the product to limit percent-of-total calculations to certain products."
     label = "Subscription Category"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Hardware"
-        default = false
-        label = "Hardware"
-      },
-      {
-        fullName = "Software"
-        default = false
-        label = "Software"
-      },
-    ]
+    valueSet = {
+      values = {
+        Hardware = {
+          fullName = "Hardware"
+          default = false
+          label = "Hardware"
+        }
+        Software = {
+          fullName = "Software"
+          default = false
+          label = "Software"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SubscriptionCategory__c.valueSet.values.Hardware,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SubscriptionCategory__c.valueSet.values.Software,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1637,18 +1679,24 @@ IF(OR(SBQQ__Renewal__c, SBQQ__Bundled__c), 0,
     inlineHelpText = "Determines how the subscription price is calculated. If this is blank, the line items is not a subscription product."
     label = "Subscription Pricing"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Fixed Price"
-        default = false
-        label = "Fixed Price"
-      },
-      {
-        fullName = "Percent Of Total"
-        default = false
-        label = "Percent Of Total"
-      },
-    ]
+    valueSet = {
+      values = {
+        Fixed_Price@s = {
+          fullName = "Fixed Price"
+          default = false
+          label = "Fixed Price"
+        }
+        Percent_Of_Total@s = {
+          fullName = "Percent Of Total"
+          default = false
+          label = "Percent Of Total"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SubscriptionPricing__c.valueSet.values.Fixed_Price@s,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SubscriptionPricing__c.valueSet.values.Percent_Of_Total@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1662,18 +1710,24 @@ IF(OR(SBQQ__Renewal__c, SBQQ__Bundled__c), 0,
     inlineHelpText = "Determines how dynamic subscription prices are calculated: Quote uses all the non-subscription products in the quote while Group uses only non-subscription products in the same group."
     label = "Subscription Scope"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = true
-        label = "Quote"
-      },
-      {
-        fullName = "Group"
-        default = false
-        label = "Group"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = true
+          label = "Quote"
+        }
+        Group = {
+          fullName = "Group"
+          default = false
+          label = "Group"
+        }
+      }
+      order = [
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SubscriptionScope__c.valueSet.values.Quote,
+        salesforce.SBQQ__WebQuoteLine__c.field.SBQQ__SubscriptionScope__c.valueSet.values.Group,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

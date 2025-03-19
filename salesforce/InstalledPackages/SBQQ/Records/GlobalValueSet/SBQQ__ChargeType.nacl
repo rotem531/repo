@@ -1,22 +1,29 @@
 salesforce.GlobalValueSet SBQQ__ChargeType {
   fullName = "SBQQ__ChargeType"
-  customValue = [
-    {
-      fullName = "One-Time"
-      default = false
-      label = "One-Time"
-    },
-    {
-      fullName = "Recurring"
-      default = false
-      label = "Recurring"
-    },
-    {
-      fullName = "Usage"
-      default = false
-      label = "Usage"
-    },
-  ]
+  customValue = {
+    values = {
+      One_Time@b = {
+        fullName = "One-Time"
+        default = false
+        label = "One-Time"
+      }
+      Recurring = {
+        fullName = "Recurring"
+        default = false
+        label = "Recurring"
+      }
+      Usage = {
+        fullName = "Usage"
+        default = false
+        label = "Usage"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__ChargeType.customValue.values.One_Time@b,
+      salesforce.GlobalValueSet.instance.SBQQ__ChargeType.customValue.values.Recurring,
+      salesforce.GlobalValueSet.instance.SBQQ__ChargeType.customValue.values.Usage,
+    ]
+  }
   description = "The type of the product charge."
   masterLabel = "Charge Type"
   sorted = false

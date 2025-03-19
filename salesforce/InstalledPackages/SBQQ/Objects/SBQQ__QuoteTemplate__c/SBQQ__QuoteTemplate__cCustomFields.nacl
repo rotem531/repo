@@ -231,13 +231,18 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Quote Line field used to calculate a discount. The value from this field is subtracted from the total price."
     label = "Customer Discount Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Total Discount (Amt)"
-        default = false
-        label = "Total Discount (Amt)"
-      },
-    ]
+    valueSet = {
+      values = {
+        Total_Discount__Amt_@ssjk = {
+          fullName = "Total Discount (Amt)"
+          default = false
+          label = "Total Discount (Amt)"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__CustomerDiscountField__c.valueSet.values.Total_Discount__Amt_@ssjk,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -291,18 +296,24 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Deployment status of this template. Change to \"Deployed\" to make this template visible to non-admin users."
     label = "Deployment Status"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "In Development"
-        default = true
-        label = "In Development"
-      },
-      {
-        fullName = "Deployed"
-        default = false
-        label = "Deployed"
-      },
-    ]
+    valueSet = {
+      values = {
+        In_Development@s = {
+          fullName = "In Development"
+          default = true
+          label = "In Development"
+        }
+        Deployed = {
+          fullName = "Deployed"
+          default = false
+          label = "Deployed"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__DeploymentStatus__c.valueSet.values.In_Development@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__DeploymentStatus__c.valueSet.values.Deployed,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -316,13 +327,18 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Choose how to display discount schedules on the quote document. Per Quote Line will show the discount schedule and Tiers right-aligned under each Quote Line."
     label = "Show Discount Schedule"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Per Quote Line"
-        default = false
-        label = "Per Quote Line"
-      },
-    ]
+    valueSet = {
+      values = {
+        Per_Quote_Line@s = {
+          fullName = "Per Quote Line"
+          default = false
+          label = "Per Quote Line"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__DiscountScheduleShown__c.valueSet.values.Per_Quote_Line@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -336,23 +352,30 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Excludes template header and footer for First Page, Last Page, or both the First and Last Page."
     label = "Exclude Header & Footer"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "First Page"
-        default = false
-        label = "First Page"
-      },
-      {
-        fullName = "Last Page"
-        default = false
-        label = "Last Page"
-      },
-      {
-        fullName = "First and Last"
-        default = false
-        label = "First and Last"
-      },
-    ]
+    valueSet = {
+      values = {
+        First_Page@s = {
+          fullName = "First Page"
+          default = false
+          label = "First Page"
+        }
+        Last_Page@s = {
+          fullName = "Last Page"
+          default = false
+          label = "Last Page"
+        }
+        First_and_Last@s = {
+          fullName = "First and Last"
+          default = false
+          label = "First and Last"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__ExcludeHeaderFooter__c.valueSet.values.First_Page@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__ExcludeHeaderFooter__c.valueSet.values.Last_Page@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__ExcludeHeaderFooter__c.valueSet.values.First_and_Last@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -366,28 +389,36 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Excludes page numbering for All Pages, First Page, Second Page, and/or both the First and Second Page."
     label = "Exclude Page Numbers"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "All Pages"
-        default = false
-        label = "All Pages"
-      },
-      {
-        fullName = "First Page"
-        default = false
-        label = "First Page"
-      },
-      {
-        fullName = "Last Page"
-        default = false
-        label = "Last Page"
-      },
-      {
-        fullName = "First and Last"
-        default = false
-        label = "First and Last"
-      },
-    ]
+    valueSet = {
+      values = {
+        All_Pages@s = {
+          fullName = "All Pages"
+          default = false
+          label = "All Pages"
+        }
+        First_Page@s = {
+          fullName = "First Page"
+          default = false
+          label = "First Page"
+        }
+        Last_Page@s = {
+          fullName = "Last Page"
+          default = false
+          label = "Last Page"
+        }
+        First_and_Last@s = {
+          fullName = "First and Last"
+          default = false
+          label = "First and Last"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__ExcludedPages__c.valueSet.values.All_Pages@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__ExcludedPages__c.valueSet.values.First_Page@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__ExcludedPages__c.valueSet.values.Last_Page@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__ExcludedPages__c.valueSet.values.First_and_Last@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -401,108 +432,132 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Family of the font that should be applied to text in this template."
     label = "Font Family"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Courier"
-        default = false
-        label = "Courier"
-      },
-      {
-        fullName = "Dosis"
-        default = false
-        label = "Dosis"
-      },
-      {
-        fullName = "Droid Sans"
-        default = false
-        label = "Droid Sans"
-      },
-      {
-        fullName = "Droid Serif"
-        default = false
-        label = "Droid Serif"
-      },
-      {
-        fullName = "Helvetica"
-        default = true
-        label = "Helvetica"
-      },
-      {
-        fullName = "Merriweather"
-        default = false
-        label = "Merriweather"
-      },
-      {
-        fullName = "Montserrat"
-        default = false
-        label = "Montserrat"
-      },
-      {
-        fullName = "Noto Sans JP"
-        default = false
-        label = "Noto Sans JP"
-      },
-      {
-        fullName = "Noto Sans KR"
-        default = false
-        label = "Noto Sans KR"
-      },
-      {
-        fullName = "Noto Sans SC"
-        default = false
-        label = "Noto Sans SC"
-      },
-      {
-        fullName = "Noto Sans TC"
-        default = false
-        label = "Noto Sans TC"
-      },
-      {
-        fullName = "Open Sans"
-        default = false
-        label = "Open Sans"
-      },
-      {
-        fullName = "Play"
-        default = false
-        label = "Play"
-      },
-      {
-        fullName = "PT Sans"
-        default = false
-        label = "PT Sans"
-      },
-      {
-        fullName = "PT Serif"
-        default = false
-        label = "PT Serif"
-      },
-      {
-        fullName = "Roboto"
-        default = false
-        label = "Roboto"
-      },
-      {
-        fullName = "Roboto Light"
-        default = false
-        label = "Roboto Light"
-      },
-      {
-        fullName = "Times"
-        default = false
-        label = "Times"
-      },
-      {
-        fullName = "Titillium Web"
-        default = false
-        label = "Titillium Web"
-      },
-      {
-        fullName = "Ubuntu"
-        default = false
-        label = "Ubuntu"
-      },
-    ]
+    valueSet = {
+      values = {
+        Courier = {
+          fullName = "Courier"
+          default = false
+          label = "Courier"
+        }
+        Dosis = {
+          fullName = "Dosis"
+          default = false
+          label = "Dosis"
+        }
+        Droid_Sans@s = {
+          fullName = "Droid Sans"
+          default = false
+          label = "Droid Sans"
+        }
+        Droid_Serif@s = {
+          fullName = "Droid Serif"
+          default = false
+          label = "Droid Serif"
+        }
+        Helvetica = {
+          fullName = "Helvetica"
+          default = true
+          label = "Helvetica"
+        }
+        Merriweather = {
+          fullName = "Merriweather"
+          default = false
+          label = "Merriweather"
+        }
+        Montserrat = {
+          fullName = "Montserrat"
+          default = false
+          label = "Montserrat"
+        }
+        Noto_Sans_JP@s = {
+          fullName = "Noto Sans JP"
+          default = false
+          label = "Noto Sans JP"
+        }
+        Noto_Sans_KR@s = {
+          fullName = "Noto Sans KR"
+          default = false
+          label = "Noto Sans KR"
+        }
+        Noto_Sans_SC@s = {
+          fullName = "Noto Sans SC"
+          default = false
+          label = "Noto Sans SC"
+        }
+        Noto_Sans_TC@s = {
+          fullName = "Noto Sans TC"
+          default = false
+          label = "Noto Sans TC"
+        }
+        Open_Sans@s = {
+          fullName = "Open Sans"
+          default = false
+          label = "Open Sans"
+        }
+        Play = {
+          fullName = "Play"
+          default = false
+          label = "Play"
+        }
+        PT_Sans@s = {
+          fullName = "PT Sans"
+          default = false
+          label = "PT Sans"
+        }
+        PT_Serif@s = {
+          fullName = "PT Serif"
+          default = false
+          label = "PT Serif"
+        }
+        Roboto = {
+          fullName = "Roboto"
+          default = false
+          label = "Roboto"
+        }
+        Roboto_Light@s = {
+          fullName = "Roboto Light"
+          default = false
+          label = "Roboto Light"
+        }
+        Times = {
+          fullName = "Times"
+          default = false
+          label = "Times"
+        }
+        Titillium_Web@s = {
+          fullName = "Titillium Web"
+          default = false
+          label = "Titillium Web"
+        }
+        Ubuntu = {
+          fullName = "Ubuntu"
+          default = false
+          label = "Ubuntu"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Courier,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Dosis,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Droid_Sans@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Droid_Serif@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Helvetica,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Merriweather,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Montserrat,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_JP@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_KR@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_SC@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_TC@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Open_Sans@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Play,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.PT_Sans@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.PT_Serif@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Roboto,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Roboto_Light@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Times,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Titillium_Web@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__FontFamily__c.valueSet.values.Ubuntu,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -595,13 +650,18 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Select the field that has the values you want to use when grouping and subtotaling line items."
     label = "Group Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product Family"
-        default = false
-        label = "Product Family"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product_Family@s = {
+          fullName = "Product Family"
+          default = false
+          label = "Product Family"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupField__c.valueSet.values.Product_Family@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -615,108 +675,132 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Family of the font that should be applied to Group title text in this template."
     label = "Group Font Family"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Courier"
-        default = false
-        label = "Courier"
-      },
-      {
-        fullName = "Dosis"
-        default = false
-        label = "Dosis"
-      },
-      {
-        fullName = "Droid Sans"
-        default = false
-        label = "Droid Sans"
-      },
-      {
-        fullName = "Droid Serif"
-        default = false
-        label = "Droid Serif"
-      },
-      {
-        fullName = "Helvetica"
-        default = true
-        label = "Helvetica"
-      },
-      {
-        fullName = "Merriweather"
-        default = false
-        label = "Merriweather"
-      },
-      {
-        fullName = "Montserrat"
-        default = false
-        label = "Montserrat"
-      },
-      {
-        fullName = "Noto Sans JP"
-        default = false
-        label = "Noto Sans JP"
-      },
-      {
-        fullName = "Noto Sans KR"
-        default = false
-        label = "Noto Sans KR"
-      },
-      {
-        fullName = "Noto Sans SC"
-        default = false
-        label = "Noto Sans SC"
-      },
-      {
-        fullName = "Noto Sans TC"
-        default = false
-        label = "Noto Sans TC"
-      },
-      {
-        fullName = "Open Sans"
-        default = false
-        label = "Open Sans"
-      },
-      {
-        fullName = "Play"
-        default = false
-        label = "Play"
-      },
-      {
-        fullName = "PT Sans"
-        default = false
-        label = "PT Sans"
-      },
-      {
-        fullName = "PT Serif"
-        default = false
-        label = "PT Serif"
-      },
-      {
-        fullName = "Roboto"
-        default = false
-        label = "Roboto"
-      },
-      {
-        fullName = "Roboto Light"
-        default = false
-        label = "Roboto Light"
-      },
-      {
-        fullName = "Times"
-        default = false
-        label = "Times"
-      },
-      {
-        fullName = "Titillium Web"
-        default = false
-        label = "Titillium Web"
-      },
-      {
-        fullName = "Ubuntu"
-        default = false
-        label = "Ubuntu"
-      },
-    ]
+    valueSet = {
+      values = {
+        Courier = {
+          fullName = "Courier"
+          default = false
+          label = "Courier"
+        }
+        Dosis = {
+          fullName = "Dosis"
+          default = false
+          label = "Dosis"
+        }
+        Droid_Sans@s = {
+          fullName = "Droid Sans"
+          default = false
+          label = "Droid Sans"
+        }
+        Droid_Serif@s = {
+          fullName = "Droid Serif"
+          default = false
+          label = "Droid Serif"
+        }
+        Helvetica = {
+          fullName = "Helvetica"
+          default = true
+          label = "Helvetica"
+        }
+        Merriweather = {
+          fullName = "Merriweather"
+          default = false
+          label = "Merriweather"
+        }
+        Montserrat = {
+          fullName = "Montserrat"
+          default = false
+          label = "Montserrat"
+        }
+        Noto_Sans_JP@s = {
+          fullName = "Noto Sans JP"
+          default = false
+          label = "Noto Sans JP"
+        }
+        Noto_Sans_KR@s = {
+          fullName = "Noto Sans KR"
+          default = false
+          label = "Noto Sans KR"
+        }
+        Noto_Sans_SC@s = {
+          fullName = "Noto Sans SC"
+          default = false
+          label = "Noto Sans SC"
+        }
+        Noto_Sans_TC@s = {
+          fullName = "Noto Sans TC"
+          default = false
+          label = "Noto Sans TC"
+        }
+        Open_Sans@s = {
+          fullName = "Open Sans"
+          default = false
+          label = "Open Sans"
+        }
+        Play = {
+          fullName = "Play"
+          default = false
+          label = "Play"
+        }
+        PT_Sans@s = {
+          fullName = "PT Sans"
+          default = false
+          label = "PT Sans"
+        }
+        PT_Serif@s = {
+          fullName = "PT Serif"
+          default = false
+          label = "PT Serif"
+        }
+        Roboto = {
+          fullName = "Roboto"
+          default = false
+          label = "Roboto"
+        }
+        Roboto_Light@s = {
+          fullName = "Roboto Light"
+          default = false
+          label = "Roboto Light"
+        }
+        Times = {
+          fullName = "Times"
+          default = false
+          label = "Times"
+        }
+        Titillium_Web@s = {
+          fullName = "Titillium Web"
+          default = false
+          label = "Titillium Web"
+        }
+        Ubuntu = {
+          fullName = "Ubuntu"
+          default = false
+          label = "Ubuntu"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Courier,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Dosis,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Droid_Sans@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Droid_Serif@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Helvetica,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Merriweather,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Montserrat,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Noto_Sans_JP@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Noto_Sans_KR@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Noto_Sans_SC@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Noto_Sans_TC@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Open_Sans@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Play,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.PT_Sans@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.PT_Serif@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Roboto,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Roboto_Light@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Times,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Titillium_Web@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontFamily__c.valueSet.values.Ubuntu,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -746,28 +830,36 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Font style for Group titles. Default is normal if left blank."
     label = "Group Font Style"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Normal"
-        default = true
-        label = "Normal"
-      },
-      {
-        fullName = "Bold"
-        default = false
-        label = "Bold"
-      },
-      {
-        fullName = "Italic"
-        default = false
-        label = "Italic"
-      },
-      {
-        fullName = "Underline"
-        default = false
-        label = "Underline"
-      },
-    ]
+    valueSet = {
+      values = {
+        Normal = {
+          fullName = "Normal"
+          default = true
+          label = "Normal"
+        }
+        Bold = {
+          fullName = "Bold"
+          default = false
+          label = "Bold"
+        }
+        Italic = {
+          fullName = "Italic"
+          default = false
+          label = "Italic"
+        }
+        Underline = {
+          fullName = "Underline"
+          default = false
+          label = "Underline"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontStyle__c.valueSet.values.Normal,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontStyle__c.valueSet.values.Bold,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontStyle__c.valueSet.values.Italic,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupFontStyle__c.valueSet.values.Underline,
+      ]
+    }
     sorted = false
     restricted = true
     createable = true
@@ -813,23 +905,30 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Specifies the alignment of Group title and Group Description. Defaults to Left if left blank."
     label = "Group Text Alignment"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Left"
-        default = true
-        label = "Left"
-      },
-      {
-        fullName = "Center"
-        default = false
-        label = "Center"
-      },
-      {
-        fullName = "Right"
-        default = false
-        label = "Right"
-      },
-    ]
+    valueSet = {
+      values = {
+        Left = {
+          fullName = "Left"
+          default = true
+          label = "Left"
+        }
+        Center = {
+          fullName = "Center"
+          default = false
+          label = "Center"
+        }
+        Right = {
+          fullName = "Right"
+          default = false
+          label = "Right"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupTextAlignment__c.valueSet.values.Left,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupTextAlignment__c.valueSet.values.Center,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__GroupTextAlignment__c.valueSet.values.Right,
+      ]
+    }
     sorted = false
     restricted = true
     createable = true
@@ -935,18 +1034,24 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Specify how to number line items on generated documents. \"Start at quote\" numbers all lines sequentially across groups (if any). \"Start at group\" resets numbers within each group."
     label = "Line Numbering"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Start at quote"
-        default = true
-        label = "Start at quote"
-      },
-      {
-        fullName = "Start at group"
-        default = false
-        label = "Start at group"
-      },
-    ]
+    valueSet = {
+      values = {
+        Start_at_quote@s = {
+          fullName = "Start at quote"
+          default = true
+          label = "Start at quote"
+        }
+        Start_at_group@s = {
+          fullName = "Start at group"
+          default = false
+          label = "Start at group"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__LineNumbering__c.valueSet.values.Start_at_quote@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__LineNumbering__c.valueSet.values.Start_at_group@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -960,13 +1065,18 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Specify the field used in sorting line items on the document."
     label = "Line Sort Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Number"
-        default = false
-        label = "Number"
-      },
-    ]
+    valueSet = {
+      values = {
+        Number = {
+          fullName = "Number"
+          default = false
+          label = "Number"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__LineSortField__c.valueSet.values.Number,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1026,23 +1136,30 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Specify the page number alignment for the document. Defaults to Center if the field is blank."
     label = "Page Number Alignment"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Center"
-        default = false
-        label = "Center"
-      },
-      {
-        fullName = "Left"
-        default = false
-        label = "Left"
-      },
-      {
-        fullName = "Right"
-        default = false
-        label = "Right"
-      },
-    ]
+    valueSet = {
+      values = {
+        Center = {
+          fullName = "Center"
+          default = false
+          label = "Center"
+        }
+        Left = {
+          fullName = "Left"
+          default = false
+          label = "Left"
+        }
+        Right = {
+          fullName = "Right"
+          default = false
+          label = "Right"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__PageNumberAlignment__c.valueSet.values.Center,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__PageNumberAlignment__c.valueSet.values.Left,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__PageNumberAlignment__c.valueSet.values.Right,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1056,18 +1173,24 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Specify where the page numbers are displayed in the document. Defaults to Footer if the field is blank."
     label = "Page Number Position"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Footer"
-        default = true
-        label = "Footer"
-      },
-      {
-        fullName = "Header"
-        default = false
-        label = "Header"
-      },
-    ]
+    valueSet = {
+      values = {
+        Footer = {
+          fullName = "Footer"
+          default = true
+          label = "Footer"
+        }
+        Header = {
+          fullName = "Header"
+          default = false
+          label = "Header"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__PageNumberPosition__c.valueSet.values.Footer,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__PageNumberPosition__c.valueSet.values.Header,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1097,18 +1220,24 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Page orientation of PDF documents generated with this template."
     label = "Page Orientation"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Portrait"
-        default = true
-        label = "Portrait"
-      },
-      {
-        fullName = "Landscape"
-        default = false
-        label = "Landscape"
-      },
-    ]
+    valueSet = {
+      values = {
+        Portrait = {
+          fullName = "Portrait"
+          default = true
+          label = "Portrait"
+        }
+        Landscape = {
+          fullName = "Landscape"
+          default = false
+          label = "Landscape"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__PageOrientation__c.valueSet.values.Portrait,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__PageOrientation__c.valueSet.values.Landscape,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1195,13 +1324,18 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Quote line field used for roll-up. All lines where this field returns the same value will be rolled up into the first line where the value occurs."
     label = "Roll-Up Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product"
-        default = false
-        label = "Product"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product = {
+          fullName = "Product"
+          default = false
+          label = "Product"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__RollUpField__c.valueSet.values.Product,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1247,13 +1381,18 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Field used to sub group line items."
     label = "Sub Group Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Product Family"
-        default = false
-        label = "Product Family"
-      },
-    ]
+    valueSet = {
+      values = {
+        Product_Family@s = {
+          fullName = "Product Family"
+          default = false
+          label = "Product Family"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__SubGroupField__c.valueSet.values.Product_Family@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1267,28 +1406,36 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Select a Field to sum and display as group/quote subtotal."
     label = "Subtotal Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "List Total"
-        default = false
-        label = "List Total"
-      },
-      {
-        fullName = "Customer Total"
-        default = false
-        label = "Customer Total"
-      },
-      {
-        fullName = "Net Total"
-        default = false
-        label = "Net Total"
-      },
-      {
-        fullName = "Regular Total"
-        default = false
-        label = "Regular Total"
-      },
-    ]
+    valueSet = {
+      values = {
+        List_Total@s = {
+          fullName = "List Total"
+          default = false
+          label = "List Total"
+        }
+        Customer_Total@s = {
+          fullName = "Customer Total"
+          default = false
+          label = "Customer Total"
+        }
+        Net_Total@s = {
+          fullName = "Net Total"
+          default = false
+          label = "Net Total"
+        }
+        Regular_Total@s = {
+          fullName = "Regular Total"
+          default = false
+          label = "Regular Total"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__SubtotalField__c.valueSet.values.List_Total@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__SubtotalField__c.valueSet.values.Customer_Total@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__SubtotalField__c.valueSet.values.Net_Total@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__SubtotalField__c.valueSet.values.Regular_Total@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -1406,23 +1553,30 @@ type salesforce.SBQQ__QuoteTemplate__c {
     inlineHelpText = "Select the Field to sum and display as group/quote total."
     label = "Total Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Net Total"
-        default = false
-        label = "Net Total"
-      },
-      {
-        fullName = "List Total"
-        default = false
-        label = "List Total"
-      },
-      {
-        fullName = "Customer Total"
-        default = false
-        label = "Customer Total"
-      },
-    ]
+    valueSet = {
+      values = {
+        Net_Total@s = {
+          fullName = "Net Total"
+          default = false
+          label = "Net Total"
+        }
+        List_Total@s = {
+          fullName = "List Total"
+          default = false
+          label = "List Total"
+        }
+        Customer_Total@s = {
+          fullName = "Customer Total"
+          default = false
+          label = "Customer Total"
+        }
+      }
+      order = [
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__TotalField__c.valueSet.values.Net_Total@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__TotalField__c.valueSet.values.List_Total@s,
+        salesforce.SBQQ__QuoteTemplate__c.field.SBQQ__TotalField__c.valueSet.values.Customer_Total@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

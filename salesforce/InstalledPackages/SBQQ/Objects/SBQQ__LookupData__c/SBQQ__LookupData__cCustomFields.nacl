@@ -57,68 +57,84 @@ type salesforce.SBQQ__LookupData__c {
     inlineHelpText = "For use with Product Selection Rules, specifies the type of action to be performed on the Product."
     label = "Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Add"
-        default = false
-        label = "Add"
-      },
-      {
-        fullName = "Remove"
-        default = false
-        label = "Remove"
-      },
-      {
-        fullName = "Enable"
-        default = false
-        label = "Enable"
-      },
-      {
-        fullName = "Disable"
-        default = false
-        label = "Disable"
-      },
-      {
-        fullName = "Enable & Add"
-        default = false
-        label = "Enable & Add"
-      },
-      {
-        fullName = "Disable & Remove"
-        default = false
-        label = "Disable & Remove"
-      },
-      {
-        fullName = "Show"
-        default = false
-        label = "Show"
-      },
-      {
-        fullName = "Hide"
-        default = false
-        label = "Hide"
-      },
-      {
-        fullName = "Show & Add"
-        default = false
-        label = "Show & Add"
-      },
-      {
-        fullName = "Hide & Remove"
-        default = false
-        label = "Hide & Remove"
-      },
-      {
-        fullName = "Default Filter"
-        default = false
-        label = "Default Filter"
-      },
-      {
-        fullName = "Optional Filter"
-        default = false
-        label = "Optional Filter"
-      },
-    ]
+    valueSet = {
+      values = {
+        Add = {
+          fullName = "Add"
+          default = false
+          label = "Add"
+        }
+        Remove = {
+          fullName = "Remove"
+          default = false
+          label = "Remove"
+        }
+        Enable = {
+          fullName = "Enable"
+          default = false
+          label = "Enable"
+        }
+        Disable = {
+          fullName = "Disable"
+          default = false
+          label = "Disable"
+        }
+        Enable___Add@ses = {
+          fullName = "Enable & Add"
+          default = false
+          label = "Enable & Add"
+        }
+        Disable___Remove@ses = {
+          fullName = "Disable & Remove"
+          default = false
+          label = "Disable & Remove"
+        }
+        Show = {
+          fullName = "Show"
+          default = false
+          label = "Show"
+        }
+        Hide = {
+          fullName = "Hide"
+          default = false
+          label = "Hide"
+        }
+        Show___Add@ses = {
+          fullName = "Show & Add"
+          default = false
+          label = "Show & Add"
+        }
+        Hide___Remove@ses = {
+          fullName = "Hide & Remove"
+          default = false
+          label = "Hide & Remove"
+        }
+        Default_Filter@s = {
+          fullName = "Default Filter"
+          default = false
+          label = "Default Filter"
+        }
+        Optional_Filter@s = {
+          fullName = "Optional Filter"
+          default = false
+          label = "Optional Filter"
+        }
+      }
+      order = [
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Add,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Remove,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Enable,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Disable,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Enable___Add@ses,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Disable___Remove@ses,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Show,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Hide,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Show___Add@ses,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Hide___Remove@ses,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Default_Filter@s,
+        salesforce.SBQQ__LookupData__c.field.SBQQ__Type__c.valueSet.values.Optional_Filter@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

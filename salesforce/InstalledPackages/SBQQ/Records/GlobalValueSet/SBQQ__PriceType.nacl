@@ -1,17 +1,23 @@
 salesforce.GlobalValueSet SBQQ__PriceType {
   fullName = "SBQQ__PriceType"
-  customValue = [
-    {
-      fullName = "Volume"
-      default = false
-      label = "Volume"
-    },
-    {
-      fullName = "Tiered"
-      default = false
-      label = "Tiered"
-    },
-  ]
+  customValue = {
+    values = {
+      Volume = {
+        fullName = "Volume"
+        default = false
+        label = "Volume"
+      }
+      Tiered = {
+        fullName = "Tiered"
+        default = false
+        label = "Tiered"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__PriceType.customValue.values.Volume,
+      salesforce.GlobalValueSet.instance.SBQQ__PriceType.customValue.values.Tiered,
+    ]
+  }
   masterLabel = "Price Type"
   sorted = false
   _alias = "SBQQ__PriceType"

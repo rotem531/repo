@@ -21,53 +21,66 @@ type salesforce.SBQQ__TermCondition__c {
     inlineHelpText = "Choose the operator for the field."
     label = "Operator"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "equals"
-        default = false
-        label = "equals"
-      },
-      {
-        fullName = "not equals"
-        default = false
-        label = "not equals"
-      },
-      {
-        fullName = "less than"
-        default = false
-        label = "less than"
-      },
-      {
-        fullName = "less or equals"
-        default = false
-        label = "less or equals"
-      },
-      {
-        fullName = "greater than"
-        default = false
-        label = "greater than"
-      },
-      {
-        fullName = "greater or equals"
-        default = false
-        label = "greater or equals"
-      },
-      {
-        fullName = "starts with"
-        default = false
-        label = "starts with"
-      },
-      {
-        fullName = "ends with"
-        default = false
-        label = "ends with"
-      },
-      {
-        fullName = "contains"
-        default = false
-        label = "contains"
-      },
-    ]
+    valueSet = {
+      values = {
+        equals = {
+          fullName = "equals"
+          default = false
+          label = "equals"
+        }
+        not_equals@s = {
+          fullName = "not equals"
+          default = false
+          label = "not equals"
+        }
+        less_than@s = {
+          fullName = "less than"
+          default = false
+          label = "less than"
+        }
+        less_or_equals@s = {
+          fullName = "less or equals"
+          default = false
+          label = "less or equals"
+        }
+        greater_than@s = {
+          fullName = "greater than"
+          default = false
+          label = "greater than"
+        }
+        greater_or_equals@s = {
+          fullName = "greater or equals"
+          default = false
+          label = "greater or equals"
+        }
+        starts_with@s = {
+          fullName = "starts with"
+          default = false
+          label = "starts with"
+        }
+        ends_with@s = {
+          fullName = "ends with"
+          default = false
+          label = "ends with"
+        }
+        contains = {
+          fullName = "contains"
+          default = false
+          label = "contains"
+        }
+      }
+      order = [
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.equals,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.less_than@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.less_or_equals@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.greater_than@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.greater_or_equals@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.starts_with@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.ends_with@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__Operator__c.valueSet.values.contains,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -100,28 +113,36 @@ type salesforce.SBQQ__TermCondition__c {
     inlineHelpText = "Field on quote object used for testing this condition."
     label = "Tested Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "List Amount"
-        default = false
-        label = "List Amount"
-      },
-      {
-        fullName = "Regular Amount"
-        default = false
-        label = "Regular Amount"
-      },
-      {
-        fullName = "Customer Amount"
-        default = false
-        label = "Customer Amount"
-      },
-      {
-        fullName = "Net Amount"
-        default = false
-        label = "Net Amount"
-      },
-    ]
+    valueSet = {
+      values = {
+        List_Amount@s = {
+          fullName = "List Amount"
+          default = false
+          label = "List Amount"
+        }
+        Regular_Amount@s = {
+          fullName = "Regular Amount"
+          default = false
+          label = "Regular Amount"
+        }
+        Customer_Amount@s = {
+          fullName = "Customer Amount"
+          default = false
+          label = "Customer Amount"
+        }
+        Net_Amount@s = {
+          fullName = "Net Amount"
+          default = false
+          label = "Net Amount"
+        }
+      }
+      order = [
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__TestedField__c.valueSet.values.List_Amount@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__TestedField__c.valueSet.values.Regular_Amount@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__TestedField__c.valueSet.values.Customer_Amount@s,
+        salesforce.SBQQ__TermCondition__c.field.SBQQ__TestedField__c.valueSet.values.Net_Amount@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

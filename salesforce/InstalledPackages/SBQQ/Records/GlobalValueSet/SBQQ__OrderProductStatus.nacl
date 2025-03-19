@@ -1,17 +1,23 @@
 salesforce.GlobalValueSet SBQQ__OrderProductStatus {
   fullName = "SBQQ__OrderProductStatus"
-  customValue = [
-    {
-      fullName = "Draft"
-      default = true
-      label = "Draft"
-    },
-    {
-      fullName = "Activated"
-      default = false
-      label = "Activated"
-    },
-  ]
+  customValue = {
+    values = {
+      Draft = {
+        fullName = "Draft"
+        default = true
+        label = "Draft"
+      }
+      Activated = {
+        fullName = "Activated"
+        default = false
+        label = "Activated"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__OrderProductStatus.customValue.values.Draft,
+      salesforce.GlobalValueSet.instance.SBQQ__OrderProductStatus.customValue.values.Activated,
+    ]
+  }
   description = "Order Product Statuses"
   masterLabel = "Order Product Status"
   sorted = false

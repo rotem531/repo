@@ -5,120 +5,133 @@ type salesforce.SBQQ__PriceAction__c {
     inlineHelpText = "Select the field you want updated when the conditions are met."
     label = "Target Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Unit Price"
-        default = false
-        label = "Unit Price"
-      },
-      {
-        fullName = "Discount (%)"
-        default = false
-        label = "Discount (%)"
-      },
-      {
-        fullName = "Discount (Amt)"
-        default = false
-        label = "Discount (Amt)"
-      },
-      {
-        fullName = "Markup (%)"
-        default = false
-        label = "Markup (%)"
-      },
-      {
-        fullName = "Markup (Amt)"
-        default = false
-        label = "Markup (Amt)"
-      },
-      {
-        fullName = "Target"
-        default = false
-        label = "Target (%)"
-      },
-      {
-        fullName = "Norm"
-        default = false
-        label = "Norm (%)"
-      },
-      {
-        fullName = "Floor"
-        default = false
-        label = "Floor (%)"
-      },
-      {
-        fullName = "Explanation"
-        default = false
-        label = "Explanation"
-      },
-    ]
+    valueSet = {
+      values = {
+        Unit_Price@s = {
+          fullName = "Unit Price"
+          default = false
+          label = "Unit Price"
+        }
+        Discount____@sjpk = {
+          fullName = "Discount (%)"
+          default = false
+          label = "Discount (%)"
+        }
+        Discount__Amt_@sjk = {
+          fullName = "Discount (Amt)"
+          default = false
+          label = "Discount (Amt)"
+        }
+        Markup____@sjpk = {
+          fullName = "Markup (%)"
+          default = false
+          label = "Markup (%)"
+        }
+        Markup__Amt_@sjk = {
+          fullName = "Markup (Amt)"
+          default = false
+          label = "Markup (Amt)"
+        }
+        Target = {
+          fullName = "Target"
+          default = false
+          label = "Target (%)"
+        }
+        Norm = {
+          fullName = "Norm"
+          default = false
+          label = "Norm (%)"
+        }
+        Floor = {
+          fullName = "Floor"
+          default = false
+          label = "Floor (%)"
+        }
+        Explanation = {
+          fullName = "Explanation"
+          default = false
+          label = "Explanation"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Unit_Price@s,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Discount____@sjpk,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Discount__Amt_@sjk,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Markup____@sjpk,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Markup__Amt_@sjk,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Target,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Norm,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Floor,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Explanation,
+      ]
+    }
     sorted = false
     restricted = false
     fieldDependency = {
       controllingField = "SBQQ__TargetObject__c"
       valueSettings = [
         {
-          valueName = "Unit Price"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Unit_Price@s.fullName
           controllingFieldValue = [
-            "Quote",
-            "Quote Line",
-            "Product Option",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s.fullName,
           ]
         },
         {
-          valueName = "Discount (%)"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Discount____@sjpk.fullName
           controllingFieldValue = [
-            "Quote",
-            "Quote Line",
-            "Product Option",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s.fullName,
           ]
         },
         {
-          valueName = "Discount (Amt)"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Discount__Amt_@sjk.fullName
           controllingFieldValue = [
-            "Quote",
-            "Quote Line",
-            "Product Option",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s.fullName,
           ]
         },
         {
-          valueName = "Markup (%)"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Markup____@sjpk.fullName
           controllingFieldValue = [
-            "Quote",
-            "Quote Line",
-            "Product Option",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s.fullName,
           ]
         },
         {
-          valueName = "Markup (Amt)"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Markup__Amt_@sjk.fullName
           controllingFieldValue = [
-            "Quote",
-            "Quote Line",
-            "Product Option",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s.fullName,
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s.fullName,
           ]
         },
         {
-          valueName = "Target"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Target.fullName
           controllingFieldValue = [
-            "Quote Line Pricing Guidance",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line_Pricing_Guidance@s.fullName,
           ]
         },
         {
-          valueName = "Norm"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Norm.fullName
           controllingFieldValue = [
-            "Quote Line Pricing Guidance",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line_Pricing_Guidance@s.fullName,
           ]
         },
         {
-          valueName = "Floor"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Floor.fullName
           controllingFieldValue = [
-            "Quote Line Pricing Guidance",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line_Pricing_Guidance@s.fullName,
           ]
         },
         {
-          valueName = "Explanation"
+          valueName = salesforce.SBQQ__PriceAction__c.field.SBQQ__Field__c.valueSet.values.Explanation.fullName
           controllingFieldValue = [
-            "Quote Line Pricing Guidance",
+            salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line_Pricing_Guidance@s.fullName,
           ]
         },
       ]
@@ -234,13 +247,18 @@ type salesforce.SBQQ__PriceAction__c {
     inlineHelpText = "API Name of the field to return from the row matching the condition."
     label = "Source Lookup Field"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "SBQQ__Value__c"
-        default = false
-        label = "SBQQ__Value__c"
-      },
-    ]
+    valueSet = {
+      values = {
+        SBQQ__Value__c = {
+          fullName = "SBQQ__Value__c"
+          default = false
+          label = "SBQQ__Value__c"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__SourceLookupField__c.valueSet.values.SBQQ__Value__c,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true
@@ -270,28 +288,36 @@ type salesforce.SBQQ__PriceAction__c {
     inlineHelpText = "Use Quote, Quote Line or Quote Line Pricing Guidance when Price Rule Evaluation Scope is Calculation. Use Product Option when Price Rule Evaluation Scope is Configuration."
     label = "Target Object"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Quote"
-        default = false
-        label = "Quote"
-      },
-      {
-        fullName = "Quote Line"
-        default = false
-        label = "Quote Line"
-      },
-      {
-        fullName = "Product Option"
-        default = false
-        label = "Product Option"
-      },
-      {
-        fullName = "Quote Line Pricing Guidance"
-        default = false
-        label = "Quote Line Pricing Guidance"
-      },
-    ]
+    valueSet = {
+      values = {
+        Quote = {
+          fullName = "Quote"
+          default = false
+          label = "Quote"
+        }
+        Quote_Line@s = {
+          fullName = "Quote Line"
+          default = false
+          label = "Quote Line"
+        }
+        Product_Option@s = {
+          fullName = "Product Option"
+          default = false
+          label = "Product Option"
+        }
+        Quote_Line_Pricing_Guidance@s = {
+          fullName = "Quote Line Pricing Guidance"
+          default = false
+          label = "Quote Line Pricing Guidance"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Product_Option@s,
+        salesforce.SBQQ__PriceAction__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line_Pricing_Guidance@s,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

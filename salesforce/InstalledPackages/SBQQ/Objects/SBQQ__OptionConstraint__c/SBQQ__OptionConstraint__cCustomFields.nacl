@@ -120,18 +120,24 @@ type salesforce.SBQQ__OptionConstraint__c {
     inlineHelpText = "Choose the behavior of this constraint: dependency means inclusion is required while exclusion means the option constraint is not selected when the constraining option is or vice versa."
     label = "Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Dependency"
-        default = true
-        label = "Dependency"
-      },
-      {
-        fullName = "Exclusion"
-        default = false
-        label = "Exclusion"
-      },
-    ]
+    valueSet = {
+      values = {
+        Dependency = {
+          fullName = "Dependency"
+          default = true
+          label = "Dependency"
+        }
+        Exclusion = {
+          fullName = "Exclusion"
+          default = false
+          label = "Exclusion"
+        }
+      }
+      order = [
+        salesforce.SBQQ__OptionConstraint__c.field.SBQQ__Type__c.valueSet.values.Dependency,
+        salesforce.SBQQ__OptionConstraint__c.field.SBQQ__Type__c.valueSet.values.Exclusion,
+      ]
+    }
     sorted = false
     restricted = false
     createable = true

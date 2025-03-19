@@ -65,13 +65,18 @@ type salesforce.SBQQ__PricingGuidance__c {
     inlineHelpText = "Range: The guidance discounts using only the pricing guidance tier that applies to the quote line quantity."
     label = "Type"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Range"
-        default = true
-        label = "Range"
-      },
-    ]
+    valueSet = {
+      values = {
+        Range = {
+          fullName = "Range"
+          default = true
+          label = "Range"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PricingGuidance__c.field.SBQQ__Type__c.valueSet.values.Range,
+      ]
+    }
     sorted = false
     restricted = true
     createable = true
@@ -85,13 +90,18 @@ type salesforce.SBQQ__PricingGuidance__c {
     inlineHelpText = "Choose the type of discount that this pricing guidance applies to the quote line."
     label = "Unit"
     trackTrending = false
-    valueSet = [
-      {
-        fullName = "Percent"
-        default = false
-        label = "Percent"
-      },
-    ]
+    valueSet = {
+      values = {
+        Percent = {
+          fullName = "Percent"
+          default = false
+          label = "Percent"
+        }
+      }
+      order = [
+        salesforce.SBQQ__PricingGuidance__c.field.SBQQ__Unit__c.valueSet.values.Percent,
+      ]
+    }
     sorted = false
     restricted = true
     createable = true

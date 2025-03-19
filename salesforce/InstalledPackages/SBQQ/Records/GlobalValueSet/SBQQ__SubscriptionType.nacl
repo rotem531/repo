@@ -1,27 +1,35 @@
 salesforce.GlobalValueSet SBQQ__SubscriptionType {
   fullName = "SBQQ__SubscriptionType"
-  customValue = [
-    {
-      fullName = "Renewable"
-      default = false
-      label = "Renewable"
-    },
-    {
-      fullName = "One-time"
-      default = false
-      label = "One-time"
-    },
-    {
-      fullName = "Renewable/Evergreen"
-      default = false
-      label = "Renewable/Evergreen"
-    },
-    {
-      fullName = "Evergreen"
-      default = false
-      label = "Evergreen"
-    },
-  ]
+  customValue = {
+    values = {
+      Renewable = {
+        fullName = "Renewable"
+        default = false
+        label = "Renewable"
+      }
+      One_time@b = {
+        fullName = "One-time"
+        default = false
+        label = "One-time"
+      }
+      Renewable_Evergreen@d = {
+        fullName = "Renewable/Evergreen"
+        default = false
+        label = "Renewable/Evergreen"
+      }
+      Evergreen = {
+        fullName = "Evergreen"
+        default = false
+        label = "Evergreen"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Renewable,
+      salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.One_time@b,
+      salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Renewable_Evergreen@d,
+      salesforce.GlobalValueSet.instance.SBQQ__SubscriptionType.customValue.values.Evergreen,
+    ]
+  }
   description = "Subscription type options"
   masterLabel = "Subscription Type"
   sorted = false

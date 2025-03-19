@@ -1,32 +1,41 @@
 salesforce.GlobalValueSet SBQQ__BillingFrequency {
   fullName = "SBQQ__BillingFrequency"
-  customValue = [
-    {
-      fullName = "Monthly"
-      default = false
-      label = "Monthly"
-    },
-    {
-      fullName = "Quarterly"
-      default = false
-      label = "Quarterly"
-    },
-    {
-      fullName = "Semiannual"
-      default = false
-      label = "Semiannual"
-    },
-    {
-      fullName = "Annual"
-      default = false
-      label = "Annual"
-    },
-    {
-      fullName = "Invoice Plan"
-      default = false
-      label = "Invoice Plan"
-    },
-  ]
+  customValue = {
+    values = {
+      Monthly = {
+        fullName = "Monthly"
+        default = false
+        label = "Monthly"
+      }
+      Quarterly = {
+        fullName = "Quarterly"
+        default = false
+        label = "Quarterly"
+      }
+      Semiannual = {
+        fullName = "Semiannual"
+        default = false
+        label = "Semiannual"
+      }
+      Annual = {
+        fullName = "Annual"
+        default = false
+        label = "Annual"
+      }
+      Invoice_Plan@s = {
+        fullName = "Invoice Plan"
+        default = false
+        label = "Invoice Plan"
+      }
+    }
+    order = [
+      salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency.customValue.values.Monthly,
+      salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency.customValue.values.Quarterly,
+      salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency.customValue.values.Semiannual,
+      salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency.customValue.values.Annual,
+      salesforce.GlobalValueSet.instance.SBQQ__BillingFrequency.customValue.values.Invoice_Plan@s,
+    ]
+  }
   description = "The billing frequency."
   masterLabel = "Billing Frequency"
   sorted = false

@@ -6,30 +6,23 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "Determines how the column label and values are aligned."
     label = "Alignment"
     trackTrending = false
-    valueSet = {
-      values = {
-        Left = {
-          fullName = "Left"
-          default = true
-          label = "Left"
-        }
-        Center = {
-          fullName = "Center"
-          default = false
-          label = "Center"
-        }
-        Right = {
-          fullName = "Right"
-          default = false
-          label = "Right"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__Alignment__c.valueSet.values.Left,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__Alignment__c.valueSet.values.Center,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__Alignment__c.valueSet.values.Right,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Left"
+        default = true
+        label = "Left"
+      },
+      {
+        fullName = "Center"
+        default = false
+        label = "Center"
+      },
+      {
+        fullName = "Right"
+        default = false
+        label = "Right"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -59,18 +52,13 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "The field that sources the dynamic heading for this column."
     label = "Column Heading Field"
     trackTrending = false
-    valueSet = {
-      values = {
-        Type = {
-          fullName = "Type"
-          default = false
-          label = "Type"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__ColumnHeadingField__c.valueSet.values.Type,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Type"
+        default = false
+        label = "Type"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -84,18 +72,13 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "Field on quote object that controls whether this column prints on generated PDF document."
     label = "Conditional Print Field"
     trackTrending = false
-    valueSet = {
-      values = {
-        Group_Line_Items@s = {
-          fullName = "Group Line Items"
-          default = false
-          label = "Group Line Items"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__ConditionalPrintField__c.valueSet.values.Group_Line_Items@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Group Line Items"
+        default = false
+        label = "Group Line Items"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -153,132 +136,108 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "Select font family to apply to this column. Leaving blank inherits form the template."
     label = "Font Family"
     trackTrending = false
-    valueSet = {
-      values = {
-        Courier = {
-          fullName = "Courier"
-          default = false
-          label = "Courier"
-        }
-        Dosis = {
-          fullName = "Dosis"
-          default = false
-          label = "Dosis"
-        }
-        Droid_Sans@s = {
-          fullName = "Droid Sans"
-          default = false
-          label = "Droid Sans"
-        }
-        Droid_Serif@s = {
-          fullName = "Droid Serif"
-          default = false
-          label = "Droid Serif"
-        }
-        Helvetica = {
-          fullName = "Helvetica"
-          default = false
-          label = "Helvetica"
-        }
-        Merriweather = {
-          fullName = "Merriweather"
-          default = false
-          label = "Merriweather"
-        }
-        Montserrat = {
-          fullName = "Montserrat"
-          default = false
-          label = "Montserrat"
-        }
-        Noto_Sans_JP@s = {
-          fullName = "Noto Sans JP"
-          default = false
-          label = "Noto Sans JP"
-        }
-        Noto_Sans_KR@s = {
-          fullName = "Noto Sans KR"
-          default = false
-          label = "Noto Sans KR"
-        }
-        Noto_Sans_SC@s = {
-          fullName = "Noto Sans SC"
-          default = false
-          label = "Noto Sans SC"
-        }
-        Noto_Sans_TC@s = {
-          fullName = "Noto Sans TC"
-          default = false
-          label = "Noto Sans TC"
-        }
-        Open_Sans@s = {
-          fullName = "Open Sans"
-          default = false
-          label = "Open Sans"
-        }
-        Play = {
-          fullName = "Play"
-          default = false
-          label = "Play"
-        }
-        PT_Sans@s = {
-          fullName = "PT Sans"
-          default = false
-          label = "PT Sans"
-        }
-        PT_Serif@s = {
-          fullName = "PT Serif"
-          default = false
-          label = "PT Serif"
-        }
-        Roboto = {
-          fullName = "Roboto"
-          default = false
-          label = "Roboto"
-        }
-        Roboto_Light@s = {
-          fullName = "Roboto Light"
-          default = false
-          label = "Roboto Light"
-        }
-        Times = {
-          fullName = "Times"
-          default = false
-          label = "Times"
-        }
-        Titillium_Web@s = {
-          fullName = "Titillium Web"
-          default = false
-          label = "Titillium Web"
-        }
-        Ubuntu = {
-          fullName = "Ubuntu"
-          default = false
-          label = "Ubuntu"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Courier,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Dosis,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Droid_Sans@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Droid_Serif@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Helvetica,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Merriweather,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Montserrat,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_JP@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_KR@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_SC@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Noto_Sans_TC@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Open_Sans@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Play,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.PT_Sans@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.PT_Serif@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Roboto,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Roboto_Light@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Times,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Titillium_Web@s,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontFamily__c.valueSet.values.Ubuntu,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Courier"
+        default = false
+        label = "Courier"
+      },
+      {
+        fullName = "Dosis"
+        default = false
+        label = "Dosis"
+      },
+      {
+        fullName = "Droid Sans"
+        default = false
+        label = "Droid Sans"
+      },
+      {
+        fullName = "Droid Serif"
+        default = false
+        label = "Droid Serif"
+      },
+      {
+        fullName = "Helvetica"
+        default = false
+        label = "Helvetica"
+      },
+      {
+        fullName = "Merriweather"
+        default = false
+        label = "Merriweather"
+      },
+      {
+        fullName = "Montserrat"
+        default = false
+        label = "Montserrat"
+      },
+      {
+        fullName = "Noto Sans JP"
+        default = false
+        label = "Noto Sans JP"
+      },
+      {
+        fullName = "Noto Sans KR"
+        default = false
+        label = "Noto Sans KR"
+      },
+      {
+        fullName = "Noto Sans SC"
+        default = false
+        label = "Noto Sans SC"
+      },
+      {
+        fullName = "Noto Sans TC"
+        default = false
+        label = "Noto Sans TC"
+      },
+      {
+        fullName = "Open Sans"
+        default = false
+        label = "Open Sans"
+      },
+      {
+        fullName = "Play"
+        default = false
+        label = "Play"
+      },
+      {
+        fullName = "PT Sans"
+        default = false
+        label = "PT Sans"
+      },
+      {
+        fullName = "PT Serif"
+        default = false
+        label = "PT Serif"
+      },
+      {
+        fullName = "Roboto"
+        default = false
+        label = "Roboto"
+      },
+      {
+        fullName = "Roboto Light"
+        default = false
+        label = "Roboto Light"
+      },
+      {
+        fullName = "Times"
+        default = false
+        label = "Times"
+      },
+      {
+        fullName = "Titillium Web"
+        default = false
+        label = "Titillium Web"
+      },
+      {
+        fullName = "Ubuntu"
+        default = false
+        label = "Ubuntu"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -307,24 +266,18 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "Specify font weight for text in this column. Leaving blank defaults to \"Normal\"."
     label = "Font Weight"
     trackTrending = false
-    valueSet = {
-      values = {
-        Normal = {
-          fullName = "Normal"
-          default = true
-          label = "Normal"
-        }
-        Bold = {
-          fullName = "Bold"
-          default = false
-          label = "Bold"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontWeight__c.valueSet.values.Normal,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__FontWeight__c.valueSet.values.Bold,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Normal"
+        default = true
+        label = "Normal"
+      },
+      {
+        fullName = "Bold"
+        default = false
+        label = "Bold"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -469,24 +422,18 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "Specify font weight for text in the summary row for this column Leaving blank defaults to font weight for the column overall."
     label = "Summary Font Weight"
     trackTrending = false
-    valueSet = {
-      values = {
-        Normal = {
-          fullName = "Normal"
-          default = false
-          label = "Normal"
-        }
-        Bold = {
-          fullName = "Bold"
-          default = false
-          label = "Bold"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__SummaryFontWeight__c.valueSet.values.Normal,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__SummaryFontWeight__c.valueSet.values.Bold,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Normal"
+        default = false
+        label = "Normal"
+      },
+      {
+        fullName = "Bold"
+        default = false
+        label = "Bold"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -500,18 +447,13 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "Function used to summarize values in this column."
     label = "Summary Function"
     trackTrending = false
-    valueSet = {
-      values = {
-        SUM = {
-          fullName = "SUM"
-          default = false
-          label = "SUM"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__SummaryFunction__c.valueSet.values.SUM,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "SUM"
+        default = false
+        label = "SUM"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -540,24 +482,18 @@ type salesforce.SBQQ__LineColumn__c {
     inlineHelpText = "Set the level on which this column should be summarized."
     label = "Summary Level"
     trackTrending = false
-    valueSet = {
-      values = {
-        All = {
-          fullName = "All"
-          default = true
-          label = "All"
-        }
-        Sub_Group@s = {
-          fullName = "Sub Group"
-          default = false
-          label = "Sub Group"
-        }
-      }
-      order = [
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__SummaryLevel__c.valueSet.values.All,
-        salesforce.SBQQ__LineColumn__c.field.SBQQ__SummaryLevel__c.valueSet.values.Sub_Group@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "All"
+        default = true
+        label = "All"
+      },
+      {
+        fullName = "Sub Group"
+        default = false
+        label = "Sub Group"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

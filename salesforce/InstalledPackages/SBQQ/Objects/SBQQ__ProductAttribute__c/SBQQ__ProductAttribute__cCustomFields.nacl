@@ -6,24 +6,18 @@ type salesforce.SBQQ__ProductAttribute__c {
     inlineHelpText = "Unsupported Field"
     label = "Apply Immediately"
     trackTrending = false
-    valueSet = {
-      values = {
-        True = {
-          fullName = "True"
-          default = false
-          label = "True"
-        }
-        False = {
-          fullName = "False"
-          default = false
-          label = "False"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__AppliedImmediately__c.valueSet.values.True,
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__AppliedImmediately__c.valueSet.values.False,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -37,24 +31,18 @@ type salesforce.SBQQ__ProductAttribute__c {
     inlineHelpText = "Unsupported Field"
     label = "Apply To Product Options"
     trackTrending = false
-    valueSet = {
-      values = {
-        True = {
-          fullName = "True"
-          default = false
-          label = "True"
-        }
-        False = {
-          fullName = "False"
-          default = false
-          label = "False"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__ApplyToProductOptions__c.valueSet.values.True,
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__ApplyToProductOptions__c.valueSet.values.False,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -114,24 +102,18 @@ type salesforce.SBQQ__ProductAttribute__c {
     inlineHelpText = "Unsupported Field"
     label = "Auto-Select"
     trackTrending = false
-    valueSet = {
-      values = {
-        True = {
-          fullName = "True"
-          default = false
-          label = "True"
-        }
-        False = {
-          fullName = "False"
-          default = false
-          label = "False"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__AutoSelect__c.valueSet.values.True,
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__AutoSelect__c.valueSet.values.False,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -158,24 +140,18 @@ type salesforce.SBQQ__ProductAttribute__c {
     inlineHelpText = "Unsupported Field"
     label = "Hidden"
     trackTrending = false
-    valueSet = {
-      values = {
-        True = {
-          fullName = "True"
-          default = false
-          label = "True"
-        }
-        False = {
-          fullName = "False"
-          default = false
-          label = "False"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__Hidden__c.valueSet.values.True,
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__Hidden__c.valueSet.values.False,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -189,24 +165,18 @@ type salesforce.SBQQ__ProductAttribute__c {
     inlineHelpText = "Unsupported Field"
     label = "Required"
     trackTrending = false
-    valueSet = {
-      values = {
-        True = {
-          fullName = "True"
-          default = false
-          label = "True"
-        }
-        False = {
-          fullName = "False"
-          default = false
-          label = "False"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__Required__c.valueSet.values.True,
-        salesforce.SBQQ__ProductAttribute__c.field.SBQQ__Required__c.valueSet.values.False,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "True"
+        default = false
+        label = "True"
+      },
+      {
+        fullName = "False"
+        default = false
+        label = "False"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

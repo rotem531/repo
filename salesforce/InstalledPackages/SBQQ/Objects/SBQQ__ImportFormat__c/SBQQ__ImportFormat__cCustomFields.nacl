@@ -34,18 +34,13 @@ type salesforce.SBQQ__ImportFormat__c {
     inlineHelpText = "Target Object to be imported."
     label = "Target Object"
     trackTrending = false
-    valueSet = {
-      values = {
-        Quote_Line@s = {
-          fullName = "Quote Line"
-          default = true
-          label = "Quote Line"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ImportFormat__c.field.SBQQ__TargetObject__c.valueSet.values.Quote_Line@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Quote Line"
+        default = true
+        label = "Quote Line"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

@@ -22,48 +22,38 @@ type salesforce.SBQQ__ImportColumn__c {
     inlineHelpText = "Enter the API Name."
     label = "Field Name"
     trackTrending = false
-    valueSet = {
-      values = {
-        Discount____@sjpk = {
-          fullName = "Discount (%)"
-          default = false
-          label = "Discount (%)"
-        }
-        Discount__Amt_@sjk = {
-          fullName = "Discount (Amt)"
-          default = false
-          label = "Discount (Amt)"
-        }
-        Partner_Discount@s = {
-          fullName = "Partner Discount"
-          default = false
-          label = "Partner Discount"
-        }
-        Product_Code@s = {
-          fullName = "Product Code"
-          default = false
-          label = "Product Code"
-        }
-        Quantity = {
-          fullName = "Quantity"
-          default = false
-          label = "Quantity"
-        }
-        List_Price@s = {
-          fullName = "List Price"
-          default = false
-          label = "List Price"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ImportColumn__c.field.SBQQ__FieldName__c.valueSet.values.Discount____@sjpk,
-        salesforce.SBQQ__ImportColumn__c.field.SBQQ__FieldName__c.valueSet.values.Discount__Amt_@sjk,
-        salesforce.SBQQ__ImportColumn__c.field.SBQQ__FieldName__c.valueSet.values.Partner_Discount@s,
-        salesforce.SBQQ__ImportColumn__c.field.SBQQ__FieldName__c.valueSet.values.Product_Code@s,
-        salesforce.SBQQ__ImportColumn__c.field.SBQQ__FieldName__c.valueSet.values.Quantity,
-        salesforce.SBQQ__ImportColumn__c.field.SBQQ__FieldName__c.valueSet.values.List_Price@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Discount (%)"
+        default = false
+        label = "Discount (%)"
+      },
+      {
+        fullName = "Discount (Amt)"
+        default = false
+        label = "Discount (Amt)"
+      },
+      {
+        fullName = "Partner Discount"
+        default = false
+        label = "Partner Discount"
+      },
+      {
+        fullName = "Product Code"
+        default = false
+        label = "Product Code"
+      },
+      {
+        fullName = "Quantity"
+        default = false
+        label = "Quantity"
+      },
+      {
+        fullName = "List Price"
+        default = false
+        label = "List Price"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

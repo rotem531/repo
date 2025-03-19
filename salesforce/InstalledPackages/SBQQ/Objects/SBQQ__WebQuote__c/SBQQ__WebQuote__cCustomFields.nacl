@@ -273,24 +273,18 @@ type salesforce.SBQQ__WebQuote__c {
     inlineHelpText = "Method used to deliver products in this quote."
     label = "Delivery Method"
     trackTrending = false
-    valueSet = {
-      values = {
-        Download = {
-          fullName = "Download"
-          default = false
-          label = "Download"
-        }
-        Ship = {
-          fullName = "Ship"
-          default = false
-          label = "Ship"
-        }
-      }
-      order = [
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__DeliveryMethod__c.valueSet.values.Download,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__DeliveryMethod__c.valueSet.values.Ship,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Download"
+        default = false
+        label = "Download"
+      },
+      {
+        fullName = "Ship"
+        default = false
+        label = "Ship"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -543,48 +537,38 @@ type salesforce.SBQQ__WebQuote__c {
     inlineHelpText = "Terms that govern payment of the items in this quote."
     label = "Payment Terms"
     trackTrending = false
-    valueSet = {
-      values = {
-        Due_on_receipt@s = {
-          fullName = "Due on receipt"
-          default = false
-          label = "Due on receipt"
-        }
-        Net_15@s = {
-          fullName = "Net 15"
-          default = false
-          label = "Net 15"
-        }
-        Net_30@s = {
-          fullName = "Net 30"
-          default = true
-          label = "Net 30"
-        }
-        Net_45@s = {
-          fullName = "Net 45"
-          default = false
-          label = "Net 45"
-        }
-        Net_60@s = {
-          fullName = "Net 60"
-          default = false
-          label = "Net 60"
-        }
-        Net_90@s = {
-          fullName = "Net 90"
-          default = false
-          label = "Net 90"
-        }
-      }
-      order = [
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Due_on_receipt@s,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_15@s,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_30@s,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_45@s,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_60@s,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__PaymentTerms__c.valueSet.values.Net_90@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Due on receipt"
+        default = false
+        label = "Due on receipt"
+      },
+      {
+        fullName = "Net 15"
+        default = false
+        label = "Net 15"
+      },
+      {
+        fullName = "Net 30"
+        default = true
+        label = "Net 30"
+      },
+      {
+        fullName = "Net 45"
+        default = false
+        label = "Net 45"
+      },
+      {
+        fullName = "Net 60"
+        default = false
+        label = "Net 60"
+      },
+      {
+        fullName = "Net 90"
+        default = false
+        label = "Net 90"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -813,42 +797,33 @@ type salesforce.SBQQ__WebQuote__c {
     inlineHelpText = "Status of electronic signature."
     label = "Signature Status"
     trackTrending = false
-    valueSet = {
-      values = {
-        Pending = {
-          fullName = "Pending"
-          default = false
-          label = "Pending"
-        }
-        Sent = {
-          fullName = "Sent"
-          default = false
-          label = "Sent"
-        }
-        Signed = {
-          fullName = "Signed"
-          default = false
-          label = "Signed"
-        }
-        Expired = {
-          fullName = "Expired"
-          default = false
-          label = "Expired"
-        }
-        Revoked = {
-          fullName = "Revoked"
-          default = false
-          label = "Revoked"
-        }
-      }
-      order = [
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__SignatureStatus__c.valueSet.values.Pending,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__SignatureStatus__c.valueSet.values.Sent,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__SignatureStatus__c.valueSet.values.Signed,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__SignatureStatus__c.valueSet.values.Expired,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__SignatureStatus__c.valueSet.values.Revoked,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Pending"
+        default = false
+        label = "Pending"
+      },
+      {
+        fullName = "Sent"
+        default = false
+        label = "Sent"
+      },
+      {
+        fullName = "Signed"
+        default = false
+        label = "Signed"
+      },
+      {
+        fullName = "Expired"
+        default = false
+        label = "Expired"
+      },
+      {
+        fullName = "Revoked"
+        default = false
+        label = "Revoked"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -873,54 +848,43 @@ type salesforce.SBQQ__WebQuote__c {
     inlineHelpText = "Status indicating where quote is in its lifecycle."
     label = "Status"
     trackTrending = false
-    valueSet = {
-      values = {
-        Draft = {
-          fullName = "Draft"
-          default = true
-          label = "Draft"
-        }
-        In_Review@s = {
-          fullName = "In Review"
-          default = false
-          label = "In Review"
-        }
-        Approved = {
-          fullName = "Approved"
-          default = false
-          label = "Approved"
-        }
-        Denied = {
-          fullName = "Denied"
-          default = false
-          label = "Denied"
-        }
-        Presented = {
-          fullName = "Presented"
-          default = false
-          label = "Presented"
-        }
-        Accepted = {
-          fullName = "Accepted"
-          default = false
-          label = "Accepted"
-        }
-        Rejected = {
-          fullName = "Rejected"
-          default = false
-          label = "Rejected"
-        }
-      }
-      order = [
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Status__c.valueSet.values.Draft,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Status__c.valueSet.values.In_Review@s,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Status__c.valueSet.values.Approved,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Status__c.valueSet.values.Denied,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Status__c.valueSet.values.Presented,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Status__c.valueSet.values.Accepted,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Status__c.valueSet.values.Rejected,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = true
+        label = "Draft"
+      },
+      {
+        fullName = "In Review"
+        default = false
+        label = "In Review"
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+      },
+      {
+        fullName = "Denied"
+        default = false
+        label = "Denied"
+      },
+      {
+        fullName = "Presented"
+        default = false
+        label = "Presented"
+      },
+      {
+        fullName = "Accepted"
+        default = false
+        label = "Accepted"
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        label = "Rejected"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -986,36 +950,28 @@ type salesforce.SBQQ__WebQuote__c {
     inlineHelpText = "Type of quote."
     label = "Type"
     trackTrending = false
-    valueSet = {
-      values = {
-        Quote = {
-          fullName = "Quote"
-          default = true
-          label = "Quote"
-        }
-        Renewal = {
-          fullName = "Renewal"
-          default = false
-          label = "Renewal"
-        }
-        Amendment = {
-          fullName = "Amendment"
-          default = false
-          label = "Amendment"
-        }
-        Re_Quote@b = {
-          fullName = "Re-Quote"
-          default = false
-          label = "Re-Quote"
-        }
-      }
-      order = [
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Type__c.valueSet.values.Quote,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Type__c.valueSet.values.Renewal,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Type__c.valueSet.values.Amendment,
-        salesforce.SBQQ__WebQuote__c.field.SBQQ__Type__c.valueSet.values.Re_Quote@b,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = true
+        label = "Quote"
+      },
+      {
+        fullName = "Renewal"
+        default = false
+        label = "Renewal"
+      },
+      {
+        fullName = "Amendment"
+        default = false
+        label = "Amendment"
+      },
+      {
+        fullName = "Re-Quote"
+        default = false
+        label = "Re-Quote"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

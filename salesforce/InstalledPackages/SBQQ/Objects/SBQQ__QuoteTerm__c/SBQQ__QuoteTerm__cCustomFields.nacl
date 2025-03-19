@@ -42,30 +42,23 @@ type salesforce.SBQQ__QuoteTerm__c {
     inlineHelpText = "Choose the behavior for your conditions: All is AND, Any is OR, Custom is a combination of AND/OR."
     label = "Conditions Met"
     trackTrending = false
-    valueSet = {
-      values = {
-        All = {
-          fullName = "All"
-          default = true
-          label = "All"
-        }
-        Any = {
-          fullName = "Any"
-          default = false
-          label = "Any"
-        }
-        Custom = {
-          fullName = "Custom"
-          default = false
-          label = "Custom"
-        }
-      }
-      order = [
-        salesforce.SBQQ__QuoteTerm__c.field.SBQQ__ConditionsMet__c.valueSet.values.All,
-        salesforce.SBQQ__QuoteTerm__c.field.SBQQ__ConditionsMet__c.valueSet.values.Any,
-        salesforce.SBQQ__QuoteTerm__c.field.SBQQ__ConditionsMet__c.valueSet.values.Custom,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "All"
+        default = true
+        label = "All"
+      },
+      {
+        fullName = "Any"
+        default = false
+        label = "Any"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -158,36 +151,28 @@ type salesforce.SBQQ__QuoteTerm__c {
     inlineHelpText = "Status of this quote term."
     label = "Status"
     trackTrending = false
-    valueSet = {
-      values = {
-        Draft = {
-          fullName = "Draft"
-          default = true
-          label = "Draft"
-        }
-        In_Review@s = {
-          fullName = "In Review"
-          default = false
-          label = "In Review"
-        }
-        Approved = {
-          fullName = "Approved"
-          default = false
-          label = "Approved"
-        }
-        Rejected = {
-          fullName = "Rejected"
-          default = false
-          label = "Rejected"
-        }
-      }
-      order = [
-        salesforce.SBQQ__QuoteTerm__c.field.SBQQ__Status__c.valueSet.values.Draft,
-        salesforce.SBQQ__QuoteTerm__c.field.SBQQ__Status__c.valueSet.values.In_Review@s,
-        salesforce.SBQQ__QuoteTerm__c.field.SBQQ__Status__c.valueSet.values.Approved,
-        salesforce.SBQQ__QuoteTerm__c.field.SBQQ__Status__c.valueSet.values.Rejected,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Draft"
+        default = true
+        label = "Draft"
+      },
+      {
+        fullName = "In Review"
+        default = false
+        label = "In Review"
+      },
+      {
+        fullName = "Approved"
+        default = false
+        label = "Approved"
+      },
+      {
+        fullName = "Rejected"
+        default = false
+        label = "Rejected"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

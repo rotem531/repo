@@ -47,66 +47,53 @@ type salesforce.SBQQ__ProcessInputCondition__c {
     inlineHelpText = "Select the operator to use when comparing process input values."
     label = "Operator"
     trackTrending = false
-    valueSet = {
-      values = {
-        equals = {
-          fullName = "equals"
-          default = false
-          label = "equals"
-        }
-        not_equals@s = {
-          fullName = "not equals"
-          default = false
-          label = "not equals"
-        }
-        less_than@s = {
-          fullName = "less than"
-          default = false
-          label = "less than"
-        }
-        less_or_equals@s = {
-          fullName = "less or equals"
-          default = false
-          label = "less or equals"
-        }
-        greater_than@s = {
-          fullName = "greater than"
-          default = false
-          label = "greater than"
-        }
-        greater_or_equals@s = {
-          fullName = "greater or equals"
-          default = false
-          label = "greater or equals"
-        }
-        starts_with@s = {
-          fullName = "starts with"
-          default = false
-          label = "starts with"
-        }
-        ends_with@s = {
-          fullName = "ends with"
-          default = false
-          label = "ends with"
-        }
-        contains = {
-          fullName = "contains"
-          default = false
-          label = "contains"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.equals,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.less_than@s,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.less_or_equals@s,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.greater_than@s,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.greater_or_equals@s,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.starts_with@s,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.ends_with@s,
-        salesforce.SBQQ__ProcessInputCondition__c.field.SBQQ__Operator__c.valueSet.values.contains,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+      {
+        fullName = "starts with"
+        default = false
+        label = "starts with"
+      },
+      {
+        fullName = "ends with"
+        default = false
+        label = "ends with"
+      },
+      {
+        fullName = "contains"
+        default = false
+        label = "contains"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

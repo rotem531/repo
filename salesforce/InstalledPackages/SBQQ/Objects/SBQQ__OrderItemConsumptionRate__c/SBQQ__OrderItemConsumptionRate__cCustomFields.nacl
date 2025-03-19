@@ -62,24 +62,18 @@ type salesforce.SBQQ__OrderItemConsumptionRate__c {
     label = "Pricing Method"
     _required = true
     trackTrending = false
-    valueSet = {
-      values = {
-        PerUnit = {
-          fullName = "PerUnit"
-          default = false
-          label = "Per Unit"
-        }
-        FlatFee = {
-          fullName = "FlatFee"
-          default = false
-          label = "Flat Fee"
-        }
-      }
-      order = [
-        salesforce.SBQQ__OrderItemConsumptionRate__c.field.SBQQ__PricingMethod__c.valueSet.values.PerUnit,
-        salesforce.SBQQ__OrderItemConsumptionRate__c.field.SBQQ__PricingMethod__c.valueSet.values.FlatFee,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "PerUnit"
+        default = false
+        label = "Per Unit"
+      },
+      {
+        fullName = "FlatFee"
+        default = false
+        label = "Flat Fee"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

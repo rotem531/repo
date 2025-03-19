@@ -6,30 +6,23 @@ type salesforce.SBQQ__Dimension__c {
     inlineHelpText = "Controls whether cost for this product may be modified on individual quotes."
     label = "Cost Editable"
     trackTrending = false
-    valueSet = {
-      values = {
-        Inherit = {
-          fullName = "Inherit"
-          default = true
-          label = "Inherit"
-        }
-        Yes = {
-          fullName = "Yes"
-          default = false
-          label = "Yes"
-        }
-        No = {
-          fullName = "No"
-          default = false
-          label = "No"
-        }
-      }
-      order = [
-        salesforce.SBQQ__Dimension__c.field.SBQQ__CostEditable__c.valueSet.values.Inherit,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__CostEditable__c.valueSet.values.Yes,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__CostEditable__c.valueSet.values.No,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -75,30 +68,23 @@ type salesforce.SBQQ__Dimension__c {
     inlineHelpText = "Marks this dimension as not discountable."
     label = "Non Discountable"
     trackTrending = false
-    valueSet = {
-      values = {
-        Inherit = {
-          fullName = "Inherit"
-          default = true
-          label = "Inherit"
-        }
-        Yes = {
-          fullName = "Yes"
-          default = false
-          label = "Yes"
-        }
-        No = {
-          fullName = "No"
-          default = false
-          label = "No"
-        }
-      }
-      order = [
-        salesforce.SBQQ__Dimension__c.field.SBQQ__NonDiscountable__c.valueSet.values.Inherit,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__NonDiscountable__c.valueSet.values.Yes,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__NonDiscountable__c.valueSet.values.No,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -112,30 +98,23 @@ type salesforce.SBQQ__Dimension__c {
     inlineHelpText = "Marks this dimension as non-discountable for partners."
     label = "Non Partner Discountable"
     trackTrending = false
-    valueSet = {
-      values = {
-        Inherit = {
-          fullName = "Inherit"
-          default = true
-          label = "Inherit"
-        }
-        Yes = {
-          fullName = "Yes"
-          default = false
-          label = "Yes"
-        }
-        No = {
-          fullName = "No"
-          default = false
-          label = "No"
-        }
-      }
-      order = [
-        salesforce.SBQQ__Dimension__c.field.SBQQ__NonPartnerDiscountable__c.valueSet.values.Inherit,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__NonPartnerDiscountable__c.valueSet.values.Yes,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__NonPartnerDiscountable__c.valueSet.values.No,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -166,30 +145,23 @@ type salesforce.SBQQ__Dimension__c {
     inlineHelpText = "Indicates this dimension allows for price to be freely editable when building a quote."
     label = "Price Editable"
     trackTrending = false
-    valueSet = {
-      values = {
-        Inherit = {
-          fullName = "Inherit"
-          default = true
-          label = "Inherit"
-        }
-        Yes = {
-          fullName = "Yes"
-          default = false
-          label = "Yes"
-        }
-        No = {
-          fullName = "No"
-          default = false
-          label = "No"
-        }
-      }
-      order = [
-        salesforce.SBQQ__Dimension__c.field.SBQQ__PriceEditable__c.valueSet.values.Inherit,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__PriceEditable__c.valueSet.values.Yes,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__PriceEditable__c.valueSet.values.No,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -220,30 +192,23 @@ type salesforce.SBQQ__Dimension__c {
     inlineHelpText = "Allow or prevent changing the quantity for this dimension."
     label = "Quantity Editable"
     trackTrending = false
-    valueSet = {
-      values = {
-        Inherit = {
-          fullName = "Inherit"
-          default = true
-          label = "Inherit"
-        }
-        Yes = {
-          fullName = "Yes"
-          default = false
-          label = "Yes"
-        }
-        No = {
-          fullName = "No"
-          default = false
-          label = "No"
-        }
-      }
-      order = [
-        salesforce.SBQQ__Dimension__c.field.SBQQ__QuantityEditable__c.valueSet.values.Inherit,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__QuantityEditable__c.valueSet.values.Yes,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__QuantityEditable__c.valueSet.values.No,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -272,30 +237,23 @@ type salesforce.SBQQ__Dimension__c {
     inlineHelpText = "Indicates whether this product is taxable."
     label = "Taxable"
     trackTrending = false
-    valueSet = {
-      values = {
-        Inherit = {
-          fullName = "Inherit"
-          default = true
-          label = "Inherit"
-        }
-        Yes = {
-          fullName = "Yes"
-          default = false
-          label = "Yes"
-        }
-        No = {
-          fullName = "No"
-          default = false
-          label = "No"
-        }
-      }
-      order = [
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Taxable__c.valueSet.values.Inherit,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Taxable__c.valueSet.values.Yes,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Taxable__c.valueSet.values.No,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Inherit"
+        default = true
+        label = "Inherit"
+      },
+      {
+        fullName = "Yes"
+        default = false
+        label = "Yes"
+      },
+      {
+        fullName = "No"
+        default = false
+        label = "No"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -326,42 +284,33 @@ type salesforce.SBQQ__Dimension__c {
     inlineHelpText = "Select the type of Price Dimension: One-Time or Yearly. Yearly Dimensions are always treated as Subscriptions."
     label = "Type"
     trackTrending = false
-    valueSet = {
-      values = {
-        Year = {
-          fullName = "Year"
-          default = true
-          label = "Year"
-        }
-        Quarter = {
-          fullName = "Quarter"
-          default = false
-          label = "Quarter"
-        }
-        Month = {
-          fullName = "Month"
-          default = false
-          label = "Month"
-        }
-        Custom = {
-          fullName = "Custom"
-          default = false
-          label = "Custom"
-        }
-        One_time@b = {
-          fullName = "One-time"
-          default = false
-          label = "One-time"
-        }
-      }
-      order = [
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Type__c.valueSet.values.Year,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Type__c.valueSet.values.Quarter,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Type__c.valueSet.values.Month,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Type__c.valueSet.values.Custom,
-        salesforce.SBQQ__Dimension__c.field.SBQQ__Type__c.valueSet.values.One_time@b,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Year"
+        default = true
+        label = "Year"
+      },
+      {
+        fullName = "Quarter"
+        default = false
+        label = "Quarter"
+      },
+      {
+        fullName = "Month"
+        default = false
+        label = "Month"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+      {
+        fullName = "One-time"
+        default = false
+        label = "One-time"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

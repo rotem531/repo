@@ -6,24 +6,18 @@ type salesforce.SBQQ__ErrorCondition__c {
     inlineHelpText = "Choose Variable to evaluate this rule against a Summary Variable; otherwise, choose Value."
     label = "Filter Type"
     trackTrending = false
-    valueSet = {
-      values = {
-        Variable = {
-          fullName = "Variable"
-          default = false
-          label = "Variable"
-        }
-        Value = {
-          fullName = "Value"
-          default = false
-          label = "Value"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__FilterType__c.valueSet.values.Variable,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__FilterType__c.valueSet.values.Value,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Variable"
+        default = false
+        label = "Variable"
+      },
+      {
+        fullName = "Value"
+        default = false
+        label = "Value"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -84,66 +78,53 @@ type salesforce.SBQQ__ErrorCondition__c {
     inlineHelpText = "Choose the operator to use when evaluating your tested selection."
     label = "Operator"
     trackTrending = false
-    valueSet = {
-      values = {
-        equals = {
-          fullName = "equals"
-          default = false
-          label = "equals"
-        }
-        not_equals@s = {
-          fullName = "not equals"
-          default = false
-          label = "not equals"
-        }
-        less_than@s = {
-          fullName = "less than"
-          default = false
-          label = "less than"
-        }
-        less_or_equals@s = {
-          fullName = "less or equals"
-          default = false
-          label = "less or equals"
-        }
-        greater_than@s = {
-          fullName = "greater than"
-          default = false
-          label = "greater than"
-        }
-        greater_or_equals@s = {
-          fullName = "greater or equals"
-          default = false
-          label = "greater or equals"
-        }
-        starts_with@s = {
-          fullName = "starts with"
-          default = false
-          label = "starts with"
-        }
-        ends_with@s = {
-          fullName = "ends with"
-          default = false
-          label = "ends with"
-        }
-        contains = {
-          fullName = "contains"
-          default = false
-          label = "contains"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.equals,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.not_equals@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.less_than@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.less_or_equals@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.greater_than@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.greater_or_equals@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.starts_with@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.ends_with@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__Operator__c.valueSet.values.contains,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "equals"
+        default = false
+        label = "equals"
+      },
+      {
+        fullName = "not equals"
+        default = false
+        label = "not equals"
+      },
+      {
+        fullName = "less than"
+        default = false
+        label = "less than"
+      },
+      {
+        fullName = "less or equals"
+        default = false
+        label = "less or equals"
+      },
+      {
+        fullName = "greater than"
+        default = false
+        label = "greater than"
+      },
+      {
+        fullName = "greater or equals"
+        default = false
+        label = "greater or equals"
+      },
+      {
+        fullName = "starts with"
+        default = false
+        label = "starts with"
+      },
+      {
+        fullName = "ends with"
+        default = false
+        label = "ends with"
+      },
+      {
+        fullName = "contains"
+        default = false
+        label = "contains"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -250,40 +231,34 @@ type salesforce.SBQQ__ErrorCondition__c {
     inlineHelpText = "Field on the Quote object that should be used in testing this condition."
     label = "Tested Field"
     trackTrending = false
-    valueSet = {
-      values = {
-        Group_Line_Items@s = {
-          fullName = "Group Line Items"
-          default = false
-          label = "Group Line Items"
-        }
-        Unit_Price@s = {
-          fullName = "Unit Price"
-          default = false
-          label = "Unit Price"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedField__c.valueSet.values.Group_Line_Items@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedField__c.valueSet.values.Unit_Price@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Group Line Items"
+        default = false
+        label = "Group Line Items"
+      },
+      {
+        fullName = "Unit Price"
+        default = false
+        label = "Unit Price"
+      },
+    ]
     sorted = false
     restricted = false
     fieldDependency = {
       controllingField = "SBQQ__TestedObject__c"
       valueSettings = [
         {
-          valueName = salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedField__c.valueSet.values.Group_Line_Items@s.fullName
+          valueName = "Group Line Items"
           controllingFieldValue = [
-            salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Quote.fullName,
+            "Quote",
           ]
         },
         {
-          valueName = salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedField__c.valueSet.values.Unit_Price@s.fullName
+          valueName = "Unit Price"
           controllingFieldValue = [
-            salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Product_Option@s.fullName,
-            salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Configuration_Attributes@s.fullName,
+            "Product Option",
+            "Configuration Attributes",
           ]
         },
       ]
@@ -299,48 +274,38 @@ type salesforce.SBQQ__ErrorCondition__c {
     inlineHelpText = "Specify the object that contains the tested field."
     label = "Tested Object"
     trackTrending = false
-    valueSet = {
-      values = {
-        Quote = {
-          fullName = "Quote"
-          default = false
-          label = "Quote"
-        }
-        Quote_Line@s = {
-          fullName = "Quote Line"
-          default = false
-          label = "Quote Line"
-        }
-        Quote_Line_Group@s = {
-          fullName = "Quote Line Group"
-          default = false
-          label = "Quote Line Group"
-        }
-        Product_Option@s = {
-          fullName = "Product Option"
-          default = false
-          label = "Product Option"
-        }
-        Configuration_Attributes@s = {
-          fullName = "Configuration Attributes"
-          default = false
-          label = "Configuration Attributes"
-        }
-        Upgraded_Asset@s = {
-          fullName = "Upgraded Asset"
-          default = false
-          label = "Upgraded Asset"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Quote,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Quote_Line@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Quote_Line_Group@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Product_Option@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Configuration_Attributes@s,
-        salesforce.SBQQ__ErrorCondition__c.field.SBQQ__TestedObject__c.valueSet.values.Upgraded_Asset@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Quote"
+        default = false
+        label = "Quote"
+      },
+      {
+        fullName = "Quote Line"
+        default = false
+        label = "Quote Line"
+      },
+      {
+        fullName = "Quote Line Group"
+        default = false
+        label = "Quote Line Group"
+      },
+      {
+        fullName = "Product Option"
+        default = false
+        label = "Product Option"
+      },
+      {
+        fullName = "Configuration Attributes"
+        default = false
+        label = "Configuration Attributes"
+      },
+      {
+        fullName = "Upgraded Asset"
+        default = false
+        label = "Upgraded Asset"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

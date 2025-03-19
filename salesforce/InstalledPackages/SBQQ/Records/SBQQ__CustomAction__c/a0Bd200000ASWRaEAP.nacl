@@ -1,18 +1,18 @@
 salesforce.SBQQ__CustomAction__c a0Bd200000ASWRaEAP {
-  SBQQ__Action__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Action__c.valueSet.values.Desegment_Line@s.fullName
+  SBQQ__Action__c = "Desegment Line"
   SBQQ__Active__c = true
   SBQQ__BrandButton__c = false
   SBQQ__Class__c = "desegmentBtn"
-  SBQQ__ConditionsMet__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__ConditionsMet__c.valueSet.values.All.fullName
+  SBQQ__ConditionsMet__c = "All"
   SBQQ__Default__c = false
   SBQQ__DisplayOrder__c = 995
   SBQQ__EventHandlerName__c = "onDesegmentLine"
   SBQQ__IconClass__c = "sf-icon-magicwand"
-  SBQQ__Icon__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Icon__c.valueSet.values.magicwand.fullName
-  SBQQ__Label__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Label__c.valueSet.values.Desegment_Line@s.fullName
-  SBQQ__Location__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Location__c.valueSet.values.Line.fullName
-  SBQQ__Page__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Page__c.valueSet.values.Quote_Line_Editor@s.fullName
-  SBQQ__Type__c = salesforce.SBQQ__CustomAction__c.field.SBQQ__Type__c.valueSet.values.Button.fullName
+  SBQQ__Icon__c = "magicwand"
+  SBQQ__Label__c = "Desegment Line"
+  SBQQ__Location__c = "Line"
+  SBQQ__Page__c = "Quote Line Editor"
+  SBQQ__Type__c = "Button"
   Name = "Desegment Line"
   _alias = "Desegment Line"
 }

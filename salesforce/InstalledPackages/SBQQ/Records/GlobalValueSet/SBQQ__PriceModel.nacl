@@ -1,23 +1,17 @@
 salesforce.GlobalValueSet SBQQ__PriceModel {
   fullName = "SBQQ__PriceModel"
-  customValue = {
-    values = {
-      Flat_Fee@s = {
-        fullName = "Flat Fee"
-        default = false
-        label = "Flat Fee"
-      }
-      Per_Unit@s = {
-        fullName = "Per Unit"
-        default = false
-        label = "Per Unit"
-      }
-    }
-    order = [
-      salesforce.GlobalValueSet.instance.SBQQ__PriceModel.customValue.values.Flat_Fee@s,
-      salesforce.GlobalValueSet.instance.SBQQ__PriceModel.customValue.values.Per_Unit@s,
-    ]
-  }
+  customValue = [
+    {
+      fullName = "Flat Fee"
+      default = false
+      label = "Flat Fee"
+    },
+    {
+      fullName = "Per Unit"
+      default = false
+      label = "Per Unit"
+    },
+  ]
   description = "The price model that determines how prices are calculated."
   masterLabel = "Price Model"
   sorted = false

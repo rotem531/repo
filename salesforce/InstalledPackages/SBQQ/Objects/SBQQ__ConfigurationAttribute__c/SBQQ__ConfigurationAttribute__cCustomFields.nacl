@@ -42,30 +42,23 @@ type salesforce.SBQQ__ConfigurationAttribute__c {
     inlineHelpText = "Columns are comprised of a picklist (of 1, 2, or 3) for each Configuration Attribute. A maximum of 3 columns is allowed."
     label = "Column Order"
     trackTrending = false
-    valueSet = {
-      values = {
-        "1@" = {
-          fullName = "1"
-          default = true
-          label = "1"
-        }
-        "2@" = {
-          fullName = "2"
-          default = false
-          label = "2"
-        }
-        "3@" = {
-          fullName = "3"
-          default = false
-          label = "3"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__ColumnOrder__c.valueSet.values.1@,
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__ColumnOrder__c.valueSet.values.2@,
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__ColumnOrder__c.valueSet.values.3@,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "1"
+        default = true
+        label = "1"
+      },
+      {
+        fullName = "2"
+        default = false
+        label = "2"
+      },
+      {
+        fullName = "3"
+        default = false
+        label = "3"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -94,24 +87,18 @@ type salesforce.SBQQ__ConfigurationAttribute__c {
     inlineHelpText = "Target object for the default value of the attribute."
     label = "Default Object"
     trackTrending = false
-    valueSet = {
-      values = {
-        SBQQ__Quote__c = {
-          fullName = salesforce.SBQQ__Quote__c
-          default = false
-          label = "Quote"
-        }
-        SBQQ__QuoteLineGroup__c = {
-          fullName = salesforce.SBQQ__QuoteLineGroup__c
-          default = false
-          label = "Quote Line Group"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__DefaultObject__c.valueSet.values.SBQQ__Quote__c,
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__DefaultObject__c.valueSet.values.SBQQ__QuoteLineGroup__c,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = salesforce.SBQQ__Quote__c
+        default = false
+        label = "Quote"
+      },
+      {
+        fullName = salesforce.SBQQ__QuoteLineGroup__c
+        default = false
+        label = "Quote Line Group"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -211,24 +198,18 @@ type salesforce.SBQQ__ConfigurationAttribute__c {
     inlineHelpText = "Specify position of this attribute. Top renders above the options. Bottom renders below."
     label = "Position"
     trackTrending = false
-    valueSet = {
-      values = {
-        Top = {
-          fullName = "Top"
-          default = true
-          label = "Top"
-        }
-        Bottom = {
-          fullName = "Bottom"
-          default = false
-          label = "Bottom"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__Position__c.valueSet.values.Top,
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__Position__c.valueSet.values.Bottom,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Top"
+        default = true
+        label = "Top"
+      },
+      {
+        fullName = "Bottom"
+        default = false
+        label = "Bottom"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -284,30 +265,23 @@ type salesforce.SBQQ__ConfigurationAttribute__c {
     inlineHelpText = "Specify field on Product Option that will hold this attribute's value."
     label = "Target Field"
     trackTrending = false
-    valueSet = {
-      values = {
-        Unit_Price@s = {
-          fullName = "Unit Price"
-          default = false
-          label = "Unit Price"
-        }
-        Discount__Amt_@sjk = {
-          fullName = "Discount (Amt)"
-          default = false
-          label = "Discount (Amt)"
-        }
-        Discount____@sjpk = {
-          fullName = "Discount (%)"
-          default = false
-          label = "Discount (%)"
-        }
-      }
-      order = [
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__TargetField__c.valueSet.values.Unit_Price@s,
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__TargetField__c.valueSet.values.Discount__Amt_@sjk,
-        salesforce.SBQQ__ConfigurationAttribute__c.field.SBQQ__TargetField__c.valueSet.values.Discount____@sjpk,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Unit Price"
+        default = false
+        label = "Unit Price"
+      },
+      {
+        fullName = "Discount (Amt)"
+        default = false
+        label = "Discount (Amt)"
+      },
+      {
+        fullName = "Discount (%)"
+        default = false
+        label = "Discount (%)"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true

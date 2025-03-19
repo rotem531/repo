@@ -29,30 +29,23 @@ type salesforce.SBQQ__PriceRule__c {
     inlineHelpText = "Choose the behavior for your conditions: All is AND, Any is OR, Custom is a combination of AND/OR."
     label = "Conditions Met"
     trackTrending = false
-    valueSet = {
-      values = {
-        All = {
-          fullName = "All"
-          default = true
-          label = "All"
-        }
-        Any = {
-          fullName = "Any"
-          default = false
-          label = "Any"
-        }
-        Custom = {
-          fullName = "Custom"
-          default = false
-          label = "Custom"
-        }
-      }
-      order = [
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__ConditionsMet__c.valueSet.values.All,
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__ConditionsMet__c.valueSet.values.Any,
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__ConditionsMet__c.valueSet.values.Custom,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "All"
+        default = true
+        label = "All"
+      },
+      {
+        fullName = "Any"
+        default = false
+        label = "Any"
+      },
+      {
+        fullName = "Custom"
+        default = false
+        label = "Custom"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -66,24 +59,18 @@ type salesforce.SBQQ__PriceRule__c {
     inlineHelpText = "When None or Save is selected, the Configurator scoped price rules will fire on save.  When Edit is selected, the Configurator scoped price rules will fire on edit and save."
     label = "Configurator Evaluation Event"
     trackTrending = false
-    valueSet = {
-      values = {
-        Save = {
-          fullName = "Save"
-          default = false
-          label = "Save"
-        }
-        Edit = {
-          fullName = "Edit"
-          default = false
-          label = "Edit"
-        }
-      }
-      order = [
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__ConfiguratorEvaluationEvent__c.valueSet.values.Save,
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__ConfiguratorEvaluationEvent__c.valueSet.values.Edit,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Save"
+        default = false
+        label = "Save"
+      },
+      {
+        fullName = "Edit"
+        default = false
+        label = "Edit"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -97,36 +84,28 @@ type salesforce.SBQQ__PriceRule__c {
     inlineHelpText = "Specify when this rule should be evaluated. Only to be used when targeting Quote Line and not supported on legacy calculator."
     label = "Calculator Evaluation Event"
     trackTrending = false
-    valueSet = {
-      values = {
-        On_Initialization@s = {
-          fullName = "On Initialization"
-          default = false
-          label = "On Initialization"
-        }
-        Before_Calculate@s = {
-          fullName = "Before Calculate"
-          default = false
-          label = "Before Calculate"
-        }
-        On_Calculate@s = {
-          fullName = "On Calculate"
-          default = true
-          label = "On Calculate"
-        }
-        After_Calculate@s = {
-          fullName = "After Calculate"
-          default = false
-          label = "After Calculate"
-        }
-      }
-      order = [
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__EvaluationEvent__c.valueSet.values.On_Initialization@s,
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__EvaluationEvent__c.valueSet.values.Before_Calculate@s,
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__EvaluationEvent__c.valueSet.values.On_Calculate@s,
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__EvaluationEvent__c.valueSet.values.After_Calculate@s,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "On Initialization"
+        default = false
+        label = "On Initialization"
+      },
+      {
+        fullName = "Before Calculate"
+        default = false
+        label = "Before Calculate"
+      },
+      {
+        fullName = "On Calculate"
+        default = true
+        label = "On Calculate"
+      },
+      {
+        fullName = "After Calculate"
+        default = false
+        label = "After Calculate"
+      },
+    ]
     sorted = false
     restricted = false
     visibleLines = 3
@@ -156,18 +135,13 @@ type salesforce.SBQQ__PriceRule__c {
     inlineHelpText = "API Name of the Custom Object that stores the lookup data."
     label = "Lookup Object"
     trackTrending = false
-    valueSet = {
-      values = {
-        SBQQ__LookupData__c = {
-          fullName = salesforce.SBQQ__LookupData__c
-          default = false
-          label = "SBQQ__LookupData__c"
-        }
-      }
-      order = [
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__LookupObject__c.valueSet.values.SBQQ__LookupData__c,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = salesforce.SBQQ__LookupData__c
+        default = false
+        label = "SBQQ__LookupData__c"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
@@ -198,24 +172,18 @@ type salesforce.SBQQ__PriceRule__c {
     inlineHelpText = "Event during which this rule is evaluated."
     label = "Evaluation Scope"
     trackTrending = false
-    valueSet = {
-      values = {
-        Configurator = {
-          fullName = "Configurator"
-          default = false
-          label = "Configurator"
-        }
-        Calculator = {
-          fullName = "Calculator"
-          default = false
-          label = "Calculator"
-        }
-      }
-      order = [
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__TargetObject__c.valueSet.values.Configurator,
-        salesforce.SBQQ__PriceRule__c.field.SBQQ__TargetObject__c.valueSet.values.Calculator,
-      ]
-    }
+    valueSet = [
+      {
+        fullName = "Configurator"
+        default = false
+        label = "Configurator"
+      },
+      {
+        fullName = "Calculator"
+        default = false
+        label = "Calculator"
+      },
+    ]
     sorted = false
     restricted = false
     createable = true
